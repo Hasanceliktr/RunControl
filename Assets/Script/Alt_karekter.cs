@@ -15,6 +15,7 @@ public class Alt_karekter : MonoBehaviour
     // Update is called once per frame
     private void LateUpdate()
     {
+
         _NavMesh.SetDestination(target.transform.position);
     }
 }

@@ -8,6 +8,9 @@ public class Gamemaneger : MonoBehaviour
     public GameObject prefabKarakter;
     public GameObject DogmaNoktasý;
     public GameObject VarisNoktasi;
+
+
+    public List<GameObject> Karakterler;
     void Start()
     {
         
@@ -17,8 +20,19 @@ public class Gamemaneger : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.A))
-            Instantiate(prefabKarakter, DogmaNoktasý.transform.position, Quaternion.identity);
+
+           foreach (var item in Karakterler)
         {
+
+               if (!item.activeInHierarchy)
+                {
+                   
+                    item.transform.position = DogmaNoktasý.transform.position;
+                    item.SetActive(true);
+                    break;
+
+                }
+
 
         }
     }
