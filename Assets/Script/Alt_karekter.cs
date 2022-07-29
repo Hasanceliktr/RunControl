@@ -13,9 +13,25 @@ public class Alt_karekter : MonoBehaviour
     }
 
     // Update is called once per frame
-    private void LateUpdate()
+    private void lateUpdate()
     {
 
         _NavMesh.SetDestination(target.transform.position);
     }
+
+    private void OnTriggerEnter (Collider other)
+    
+    {
+        if (other.CompareTag("iðneliKutu")) 
+        
+        {
+            GameObject.FindWithTag("GameManager").GetComponent<Gamemaneger>().AnlikKarakterSayisi--;
+            gameObject.SetActive(false);
+
+        }
+
+    }
+
+
 }
+
