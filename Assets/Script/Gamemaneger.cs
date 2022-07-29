@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Gamemaneger : MonoBehaviour
 {
-    
-   
+
+
     public GameObject DogmaNoktasý;
     public GameObject VarisNoktasi;
     public int AnlikKarakterSayisi = 1;
@@ -13,7 +13,7 @@ public class Gamemaneger : MonoBehaviour
     public List<GameObject> Karakterler;
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -21,12 +21,12 @@ public class Gamemaneger : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.A))
 
-           foreach (var item in Karakterler)
-        {
+            foreach (var item in Karakterler)
+            {
 
-               if (!item.activeInHierarchy)
+                if (!item.activeInHierarchy)
                 {
-                   
+
                     item.transform.position = DogmaNoktasý.transform.position;
                     item.SetActive(true);
                     AnlikKarakterSayisi++;
@@ -35,6 +35,46 @@ public class Gamemaneger : MonoBehaviour
                 }
 
 
+            }
+    }
+
+    public void AdamYonetimi(string veri, Transform Pozisyon)
+    {
+        switch (veri)
+        {
+            case "x2":
+                int sayi = 0;
+                foreach (var item in Karakterler)
+                {
+                    if (sayi < AnlikKarakterSayisi)
+                    {
+                        if (!item.activeInHierarchy)
+                        {
+
+                            item.transform.position = Pozisyon.position;
+                            item.SetActive(true);
+                            sayi++;
+
+
+                        }
+                    }
+                    else
+                    {
+                        sayi = 0;
+                        break;
+                    }
+
+
+
+
+                }
+                AnlikKarakterSayisi *= 2;
+                break;
+
+
         }
     }
 }
+        
+
+

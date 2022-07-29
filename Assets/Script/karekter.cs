@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class karekter : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Gamemaneger _Gamemaneger;
     private void FixedUpdate()
     {
         transform.Translate(Vector3.forward * .5f * Time.deltaTime);
@@ -30,9 +30,21 @@ public class karekter : MonoBehaviour
 
             }
 
-
+            
+              
+          
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.name == "x2" || other.name == "+3")
+        {
+            _Gamemaneger.AdamYonetimi(other.name,other.transform);
+        }
+    }
+
+
 }
 
     
