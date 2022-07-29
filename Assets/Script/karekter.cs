@@ -41,6 +41,7 @@ public class karekter : MonoBehaviour
         if (other.name == "x2" || other.name == "+3")
         {
             _Gamemaneger.AdamYonetimi(other.name,other.transform);
+            Debug.Log(other.name);
         }
     }
 

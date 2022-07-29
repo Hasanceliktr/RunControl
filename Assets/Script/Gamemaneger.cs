@@ -17,25 +17,24 @@ public class Gamemaneger : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.A))
+    void Update() {
+    //    if (Input.GetKeyDown(KeyCode.A))
 
-            foreach (var item in Karakterler)
-            {
+    //        foreach (var item in Karakterler)
+    //        {
 
-                if (!item.activeInHierarchy)
-                {
+    //            if (!item.activeInHierarchy)
+    //            {
 
-                    item.transform.position = DogmaNoktasý.transform.position;
-                    item.SetActive(true);
-                    AnlikKarakterSayisi++;
-                    break;
+    //                item.transform.position = DogmaNoktasý.transform.position;
+    //                item.SetActive(true);
+    //                AnlikKarakterSayisi++;
+    //                break;
 
-                }
+    //            }
 
 
-            }
+    //        }
     }
 
     public void AdamYonetimi(string veri, Transform Pozisyon)
@@ -69,6 +68,7 @@ public class Gamemaneger : MonoBehaviour
 
                 }
                 AnlikKarakterSayisi *= 2;
+                Debug.Log("2 ile carpildi");
                 break;
 
 
