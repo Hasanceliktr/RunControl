@@ -6,7 +6,7 @@ public class Gamemaneger : MonoBehaviour
 {
 
 
-    
+
     public GameObject VarisNoktasi;
     public int AnlikKarakterSayisi = 1;
     public List<GameObject> Karakterler;
@@ -16,24 +16,25 @@ public class Gamemaneger : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update() {
-    //    if (Input.GetKeyDown(KeyCode.A))
+    void Update()
+    {
+        //    if (Input.GetKeyDown(KeyCode.A))
 
-    //        foreach (var item in Karakterler)
-    //        {
+        //        foreach (var item in Karakterler)
+        //        {
 
-    //            if (!item.activeInHierarchy)
-    //            {
+        //            if (!item.activeInHierarchy)
+        //            {
 
-    //                item.transform.position = DogmaNoktasý.transform.position;
-    //                item.SetActive(true);
-    //                AnlikKarakterSayisi++;
-    //                break;
+        //                item.transform.position = DogmaNoktasý.transform.position;
+        //                item.SetActive(true);
+        //                AnlikKarakterSayisi++;
+        //                break;
 
-    //            }
+        //            }
 
 
-    //        }
+        //        }
     }
 
     public void AdamYonetimi(string veri, Transform Pozisyon)
@@ -63,14 +64,12 @@ public class Gamemaneger : MonoBehaviour
                     }
 
 
-
-
                 }
                 AnlikKarakterSayisi *= 2;
                 Debug.Log("2 ile carpildi");
                 break;
 
-             case "+3":
+            case "+3":
                 int sayi2 = 0;
                 foreach (var item in Karakterler)
                 {
@@ -91,8 +90,6 @@ public class Gamemaneger : MonoBehaviour
                         sayi2 = 0;
                         break;
                     }
-
-
 
 
                 }
@@ -116,17 +113,10 @@ public class Gamemaneger : MonoBehaviour
                 }
                 else
                 {
-
-
-
-
-
-                }
-
                 int sayi3 = 0;
                 foreach (var item in Karakterler)
                 {
-                    if (sayi3 !=4)
+                    if (sayi3 != 4)
                     {
                         if (item.activeInHierarchy)
                         {
@@ -144,14 +134,68 @@ public class Gamemaneger : MonoBehaviour
                         break;
                     }
 
-
-
-
                 }
                 AnlikKarakterSayisi -= 4;
 
+        }
 
                 break;
+
+            case "/2":
+
+
+                if (AnlikKarakterSayisi < 2)
+                {
+                    foreach (var item in Karakterler)
+                    {
+                        item.transform.position = Vector3.zero;
+                        item.SetActive(false);
+                    }
+                    AnlikKarakterSayisi = 1;
+
+                }
+                else
+                {
+
+                    int bolen = AnlikKarakterSayisi /2;
+
+                    int sayi3 = 0;
+                    foreach (var item in Karakterler)
+                    {
+                        if (sayi3 != bolen)
+                        {
+                            if (item.activeInHierarchy)
+                            {
+
+                                item.transform.position = Vector3.zero;
+                                item.SetActive(false);
+                                sayi3++;
+
+
+                            }
+                        }
+                        else
+                        {
+                            sayi3 = 0;
+                            break;
+                        }
+
+                    }
+                    if (AnlikKarakterSayisi % 2 == 0)
+                    {
+                        AnlikKarakterSayisi /= 2;
+                        AnlikKarakterSayisi++;
+                    }
+
+                }
+
+                break;
+
+
+
+
+
+
         }
     }
 }
