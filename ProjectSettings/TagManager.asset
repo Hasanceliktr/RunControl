@@ -6,6 +6,7 @@ TagManager:
   tags:
   - GameManager
   - "i\u011FneliKutu"
+  - igneliKutu
   layers:
   - Default
   - TransparentFX
