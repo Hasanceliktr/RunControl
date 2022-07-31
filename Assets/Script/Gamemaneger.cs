@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using olcay;
 public class Gamemaneger : MonoBehaviour
 {
 
 
 
     public GameObject VarisNoktasi;
-    public int AnlikKarakterSayisi = 1;
+    public static int AnlikKarakterSayisi = 1;
     public List<GameObject> Karakterler;
     void Start()
     {
@@ -37,39 +37,17 @@ public class Gamemaneger : MonoBehaviour
         //        }
     }
 
-    public void AdamYonetimi(string veri, Transform Pozisyon)
+    public void AdamYonetimi(string islemturu, int Gelensayi, Transform Pozisyon)
     {
-        switch (veri)
+        switch (islemturu)
         {
-            case "x2":
-                int sayi = 0;
-                foreach (var item in Karakterler)
-                {
-                    if (sayi < AnlikKarakterSayisi)
-                    {
-                        if (!item.activeInHierarchy)
-                        {
-
-                            item.transform.position = Pozisyon.position;
-                            item.SetActive(true);
-                            sayi++;
-
-
-                        }
-                    }
-                    else
-                    {
-                        sayi = 0;
-                        break;
-                    }
-
-
-                }
-                AnlikKarakterSayisi *= 2;
-                Debug.Log("2 ile carpildi");
+            case "Carpma":
+               Kutuphane.Carpma(Gelensayi,Karakterler,Pozisyon);
+                
+                
                 break;
 
-            case "+3":
+            case "Toplama":
                 int sayi2 = 0;
                 foreach (var item in Karakterler)
                 {
@@ -98,7 +76,7 @@ public class Gamemaneger : MonoBehaviour
 
                 break;
 
-            case "-4":
+            case "Cikarma":
 
 
                 if (AnlikKarakterSayisi < 4)
@@ -141,7 +119,7 @@ public class Gamemaneger : MonoBehaviour
 
                 break;
 
-            case "/2":
+            case "Bolme":
 
 
                 if (AnlikKarakterSayisi < 2)
