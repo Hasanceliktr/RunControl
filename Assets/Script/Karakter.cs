@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Karekter : MonoBehaviour
+public class Karakter : MonoBehaviour
 {
     public GameManeger _GameManeger;
     private void FixedUpdate()
