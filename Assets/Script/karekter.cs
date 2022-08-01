@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class karekter : MonoBehaviour
+public class Karekter : MonoBehaviour
 {
-    public Gamemaneger _Gamemaneger;
+    public GameManeger _GameManeger;
     private void FixedUpdate()
     {
         transform.Translate(Vector3.forward * .5f * Time.deltaTime);
@@ -17,7 +17,7 @@ public class karekter : MonoBehaviour
         if (Input.GetKey(KeyCode.Mouse0))
         {
 
-            if(Input.GetAxis("Mouse X")<0)
+            if (Input.GetAxis("Mouse X") < 0)
             {
                 transform.position = Vector3.Lerp(transform.position, new Vector3(transform.position.x - .1f, transform.position.y, transform.position.z), .3f);
 
@@ -30,26 +30,26 @@ public class karekter : MonoBehaviour
 
             }
 
-            
-              
-          
+
+
+
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Carpma") || other.CompareTag("Toplama") || other.CompareTag("Cýkarma") || other.CompareTag("Bolme"))
+        if (other.CompareTag("Carpma") || other.CompareTag("Toplama") || other.CompareTag("Cikarma") || other.CompareTag("Bolme"))
         {
             int sayi = int.Parse(other.name);
 
-            _Gamemaneger.AdamYonetimi(other.tag, sayi , other.transform);
+            _GameManeger.AdamYonetimi(other.tag, sayi, other.transform);
 
         }
-       
+
     }
 
 
 }
 
-    
+
 

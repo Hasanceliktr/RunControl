@@ -5,12 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - GameManager
-  - "i\u011FneliKutu"
   - igneliKutu
   - Carpma
   - Toplama
   - "C\u0131karma"
-  - "B\xF6lme"
+  - Bolme
+  - Cikarma
   layers:
   - Default
   - TransparentFX

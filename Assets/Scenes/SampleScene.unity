@@ -7275,7 +7275,7 @@ GameObject:
   - component: {fileID: 421489882}
   m_Layer: 0
   m_Name: 4
-  m_TagString: "C\u0131karma"
+  m_TagString: Cikarma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7583,7 +7583,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VarisNoktasi: {fileID: 1610162573}
-  AnlikKarakterSayisi: 1
   Karakterler:
   - {fileID: 1940570595414004538}
   - {fileID: 1592152045}
@@ -7773,7 +7772,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 440743721}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.061}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18298,7 +18297,7 @@ GameObject:
   - component: {fileID: 1015778974}
   m_Layer: 0
   m_Name: 2
-  m_TagString: "B\xF6lme"
+  m_TagString: Bolme
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27077,7 +27076,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1610162573}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.014, y: 0.34, z: -1.2909985}
+  m_LocalPosition: {x: -0.014, y: 0.34, z: -3.374332}
   m_LocalScale: {x: 0.12, y: 0.12, z: 0.12}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -40123,7 +40122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3944c453cf95e1e4e8675c1b50bb7087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Gamemaneger: {fileID: 436379296}
+  _GameManeger: {fileID: 436379296}
 --- !u!1 &7504493012115468517
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using olcay;
-public class Gamemaneger : MonoBehaviour
+public class GameManeger : MonoBehaviour
 {
 
 

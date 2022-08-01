@@ -15,7 +15,7 @@ namespace olcay
     
        public static void Carpma(int GelenSayi,List<GameObject> Karakterler,Transform Pozisyon)
         {
-            int DonguSayisi = (Gamemaneger.AnlikKarakterSayisi * GelenSayi) - Gamemaneger.AnlikKarakterSayisi;
+            int DonguSayisi = (GameManeger.AnlikKarakterSayisi * GelenSayi) - GameManeger.AnlikKarakterSayisi;
             int sayi = 0;
             foreach (var item in Karakterler)
             {
@@ -37,7 +37,7 @@ namespace olcay
                 }
 
             }
-            Gamemaneger.AnlikKarakterSayisi *= GelenSayi;
+            GameManeger.AnlikKarakterSayisi *= GelenSayi;
 
 
         }

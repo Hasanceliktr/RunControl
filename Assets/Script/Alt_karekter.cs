@@ -9,7 +9,7 @@ public class Alt_karekter : MonoBehaviour
     void Start()
     {
         _NavMesh = GetComponent<NavMeshAgent>();
-        Target = GameObject.FindWithTag("GameManager").GetComponent<Gamemaneger>().VarisNoktasi;
+        Target = GameObject.FindWithTag("GameManager").GetComponent<GameManeger>().VarisNoktasi;
     }
 
     // Update is called once per frame
@@ -25,7 +25,7 @@ public class Alt_karekter : MonoBehaviour
         if (other.CompareTag("igneliKutu")) 
         
         {
-            Gamemaneger.AnlikKarakterSayisi--;
+            GameManeger.AnlikKarakterSayisi--;
             gameObject.SetActive(false);
 
         }
