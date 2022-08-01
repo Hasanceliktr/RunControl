@@ -15,7 +15,7 @@ public class GameManeger : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+    // Update is called once per frametest
     void Update()
     {
         //    if (Input.GetKeyDown(KeyCode.A))
