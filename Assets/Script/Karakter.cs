@@ -10,7 +10,7 @@ public class Karakter : MonoBehaviour
         transform.Translate(Vector3.forward * .5f * Time.deltaTime);
     }
 
-    // Update is called once per frame
+    // Update is called once per frame jj
     void Update()
     {
 
