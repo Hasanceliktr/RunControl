@@ -17,6 +17,7 @@ public class Alt_karekter : MonoBehaviour
     {
 
         _NavMesh.SetDestination(Target.transform.position);
+
     }
 
     private void OnTriggerEnter (Collider other)
@@ -25,13 +26,14 @@ public class Alt_karekter : MonoBehaviour
         if (other.CompareTag("igneliKutu")) 
         
         {
-            GameManeger.AnlikKarakterSayisi--;
+            Vector3 yeniPoz = new Vector3(transform.position.x, .23f,transform.position.z);
+
+            GameObject.FindWithTag("GameManager").GetComponent<GameManeger>().YokolmaEfektiOlustur(yeniPoz);
             gameObject.SetActive(false);
 
         }
 
     }
-
 
 }
 

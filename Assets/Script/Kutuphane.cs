@@ -13,7 +13,7 @@ namespace olcay
     {
     
     
-       public static void Carpma(int GelenSayi,List<GameObject> Karakterler,Transform Pozisyon)
+       public static void Carpma(int GelenSayi,List<GameObject> Karakterler,Transform Pozisyon, List<GameObject> OlusturmaEfektleri)
         {
             int DonguSayisi = (GameManeger.AnlikKarakterSayisi * GelenSayi) - GameManeger.AnlikKarakterSayisi;
             int sayi = 0;
@@ -23,8 +23,27 @@ namespace olcay
                 {
                     if (!item.activeInHierarchy)
                     {
+                       
+                        
+                            foreach (var item2 in OlusturmaEfektleri)
+                            {
 
-                        item.transform.position = Pozisyon.position;
+
+                                if (!item2.activeInHierarchy)
+                                {
+                                    
+
+                                    item2.SetActive(true);
+                                    item2.transform.position = Pozisyon.position;
+                                    item2.GetComponent<ParticleSystem>().Play();
+                                    break;
+
+                                }
+
+                            }
+
+
+                            item.transform.position = Pozisyon.position;
                         item.SetActive(true);
                         sayi++;
 
@@ -42,7 +61,7 @@ namespace olcay
 
         }
 
-        public static void Toplama(int GelenSayi, List<GameObject> Karakterler, Transform Pozisyon)
+        public static void Toplama(int GelenSayi, List<GameObject> Karakterler, Transform Pozisyon, List<GameObject> OlusturmaEfektleri)
         {
             int sayi2 = 0;
             foreach (var item in Karakterler)
@@ -51,6 +70,22 @@ namespace olcay
                 {
                     if (!item.activeInHierarchy)
                     {
+
+                        foreach (var item2 in OlusturmaEfektleri)
+                        {
+
+                            if (!item2.activeInHierarchy)
+                            {
+                                item2.SetActive(true);
+                                item2.transform.position = Pozisyon.position;
+                                item2.GetComponent<ParticleSystem>().Play();
+                                break;
+
+                            }
+
+                        }
+
+
 
                         item.transform.position = Pozisyon.position;
                         item.SetActive(true);
@@ -72,13 +107,32 @@ namespace olcay
 
         }
 
-        public static void Cýkarma(int GelenSayi, List<GameObject> Karakterler)
+        public static void Cýkarma(int GelenSayi, List<GameObject> Karakterler, List<GameObject> YokOlmaEfektleri)
         {
 
             if (GameManeger.AnlikKarakterSayisi < GelenSayi)
             {
                 foreach (var item in Karakterler)
                 {
+                    foreach (var item2 in YokOlmaEfektleri)
+                    {
+
+                        
+                        if (!item2.activeInHierarchy)
+                        {
+
+                            Vector3 yeniPoz = new Vector3(item.transform.position.x, .23f, item.transform.position.z);
+                            item2.SetActive(true);
+                            item2.transform.position = yeniPoz;
+                            item2.GetComponent<ParticleSystem>().Play();
+                            break;
+
+                        }
+
+                    }
+
+
+
                     item.transform.position = Vector3.zero;
                     item.SetActive(false);
                 }
@@ -94,6 +148,27 @@ namespace olcay
                     {
                         if (item.activeInHierarchy)
                         {
+
+                            foreach (var item2 in YokOlmaEfektleri)
+                            {
+
+
+                                if (!item2.activeInHierarchy)
+                                {
+                                    Vector3 yeniPoz = new Vector3(item.transform.position.x, .23f, item.transform.position.z);
+
+                                    item2.SetActive(true);
+                                    item2.transform.position = yeniPoz;
+                                    item2.GetComponent<ParticleSystem>().Play();
+                                    break;
+
+                                }
+
+                            }
+
+
+
+
 
                             item.transform.position = Vector3.zero;
                             item.SetActive(false);
@@ -116,13 +191,31 @@ namespace olcay
 
         }
 
-        public static void Bolme(int GelenSayi, List<GameObject> Karakterler)
+        public static void Bolme(int GelenSayi, List<GameObject> Karakterler,List<GameObject> YokOlmaEfektleri)
         {
 
             if (GameManeger.AnlikKarakterSayisi < 2)
             {
                 foreach (var item in Karakterler)
                 {
+                    foreach (var item2 in YokOlmaEfektleri)
+                    {
+
+
+                        if (!item2.activeInHierarchy)
+                        {
+                            Vector3 yeniPoz = new Vector3(item.transform.position.x, .23f, item.transform.position.z);
+
+                            item2.SetActive(true);
+                            item2.transform.position = yeniPoz;
+                            item2.GetComponent<ParticleSystem>().Play();
+                            break;
+
+                        }
+
+                    }
+
+
                     item.transform.position = Vector3.zero;
                     item.SetActive(false);
                 }
@@ -141,6 +234,22 @@ namespace olcay
                     {
                         if (item.activeInHierarchy)
                         {
+                            foreach (var item2 in YokOlmaEfektleri)
+                            {
+
+
+                                if (!item2.activeInHierarchy)
+                                {
+                                    Vector3 yeniPoz = new Vector3(item.transform.position.x, .23f, item.transform.position.z);
+
+                                    item2.SetActive(true);
+                                    item2.transform.position = yeniPoz;
+                                    item2.GetComponent<ParticleSystem>().Play();
+                                    break;
+
+                                }
+
+                            }
 
                             item.transform.position = Vector3.zero;
                             item.SetActive(false);

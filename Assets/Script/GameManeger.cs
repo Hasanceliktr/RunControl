@@ -10,6 +10,8 @@ public class GameManeger : MonoBehaviour
     public GameObject VarisNoktasi;
     public static int AnlikKarakterSayisi = 1;
     public List<GameObject> Karakterler;
+    public List<GameObject> OlusmaEfektleri;
+    public List<GameObject> YokOlmaEfektleri;
     void Start()
     {
 
@@ -26,20 +28,20 @@ public class GameManeger : MonoBehaviour
         switch (islemturu)
         {
             case "Carpma":
-                Matematiksel_iþlemler.Carpma(Gelensayi, Karakterler, Pozisyon);
+                Matematiksel_iþlemler.Carpma(Gelensayi, Karakterler, Pozisyon,OlusmaEfektleri);
                 break;
 
             case "Toplama":
-                Matematiksel_iþlemler.Toplama(Gelensayi, Karakterler, Pozisyon);
+                Matematiksel_iþlemler.Toplama(Gelensayi, Karakterler, Pozisyon,OlusmaEfektleri);
                 break;
 
             case "Cýkarma":
-                Matematiksel_iþlemler.Cýkarma(Gelensayi, Karakterler);
+                Matematiksel_iþlemler.Cýkarma(Gelensayi, Karakterler,YokOlmaEfektleri);
                 break;
 
 
             case "Bolme":
-                Matematiksel_iþlemler.Bolme(Gelensayi, Karakterler);
+                Matematiksel_iþlemler.Bolme(Gelensayi, Karakterler,YokOlmaEfektleri);
                 break;
 
         }
@@ -47,6 +49,24 @@ public class GameManeger : MonoBehaviour
 
     }
   
+    public void YokolmaEfektiOlustur(Vector3 Pozisyon)
+    {
+        foreach (var item in YokOlmaEfektleri)
+
+        {
+            if (!item.activeInHierarchy)
+            {
+                item.SetActive(true);
+                item.transform.position = Pozisyon;
+                item.GetComponent<ParticleSystem>().Play();
+                AnlikKarakterSayisi--;
+                break;
+            }
+        }
+
+
+
+    }
 }
         
 
