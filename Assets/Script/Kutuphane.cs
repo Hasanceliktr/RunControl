@@ -72,7 +72,7 @@ namespace olcay
 
         }
 
-        public static void Cýkarma(int GelenSayi, List<GameObject> Karakterler)
+        public static void Cikarma(int GelenSayi, List<GameObject> Karakterler)
         {
 
             if (GameManeger.AnlikKarakterSayisi < GelenSayi)
