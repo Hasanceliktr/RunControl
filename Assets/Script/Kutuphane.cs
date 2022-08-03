@@ -9,7 +9,7 @@ namespace olcay
     
 
 
-    public class Matematiksel_iþlemler : MonoBehaviour
+    public class Matematiksel_islemler : MonoBehaviour
     {
         
 
@@ -110,6 +110,7 @@ namespace olcay
 
         public static void Cikarma(int GelenSayi, List<GameObject> Karakterler,List<GameObject> YokOlmaEfektleri)
         {
+            Debug.Log("!!!!!!!!!!!!!!!!! Cikarma efecti olmalý");
 
             if (GameManeger.AnlikKarakterSayisi < GelenSayi)
             {
@@ -121,7 +122,7 @@ namespace olcay
                         
                         if (!item2.activeInHierarchy)
                         {
-                            Debug.Log("!!!!!!!!!!!!!!!!! Cikarma efecti olmalý");
+                            Debug.Log("!!!!!!!!!!!!!!!!! Cikarmaasd efecti olmalý");
 
                             Vector3 yeniPoz = new Vector3(item.transform.position.x, .23f, item.transform.position.z);
                             item2.SetActive(true);
