@@ -36,7 +36,7 @@ public class GameManeger : MonoBehaviour
                 break;
 
             case "Cikarma":
-                Matematiksel_iþlemler.Cikarma(Gelensayi, Karakterler);
+                Matematiksel_iþlemler.Cikarma(Gelensayi, Karakterler, YokOlmaEfektleri);
                 break;
 
 
