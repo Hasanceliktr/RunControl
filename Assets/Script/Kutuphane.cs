@@ -116,10 +116,11 @@ namespace olcay
             {
                 foreach (var item in Karakterler)
                 {
+                    Debug.Log("!!!!!!!!!!!!!!!!! Cikaasrma efecti olmalý");
                     foreach (var item2 in YokOlmaEfektleri)
                     {
+                        Debug.Log("!!!!!!!!!!asd!!!!!ad!! asCikaasrma efecti olmalý");
 
-                        
                         if (!item2.activeInHierarchy)
                         {
                             Debug.Log("!!!!!!!!!!!!!!!!! Cikarmaasd efecti olmalý");
