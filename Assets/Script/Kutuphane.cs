@@ -9,7 +9,7 @@ namespace olcay
     
 
 
-    public class Matematiksel_iþlemler : MonoBehaviour
+    public class Matematiksel_islemler : MonoBehaviour
     {
         
 
