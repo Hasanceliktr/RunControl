@@ -9,7 +9,7 @@ namespace olcay
     
 
 
-    public class Matematiksel_islemler : MonoBehaviour
+    public class Matematiksel_iþlemler : MonoBehaviour
     {
         
 
@@ -121,6 +121,7 @@ namespace olcay
                         
                         if (!item2.activeInHierarchy)
                         {
+                            Debug.Log("!!!!!!!!!!!!!!!!! Cikarma efecti olmalý");
 
                             Vector3 yeniPoz = new Vector3(item.transform.position.x, .23f, item.transform.position.z);
                             item2.SetActive(true);

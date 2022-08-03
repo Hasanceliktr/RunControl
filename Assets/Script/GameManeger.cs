@@ -28,20 +28,20 @@ public class GameManeger : MonoBehaviour
         switch (islemturu)
         {
             case "Carpma":
-                Matematiksel_islemler.Carpma(Gelensayi, Karakterler, Pozisyon,OlusmaEfektleri);
+                Matematiksel_iþlemler.Carpma(Gelensayi, Karakterler, Pozisyon,OlusmaEfektleri);
                 break;
 
             case "Toplama":
-                Matematiksel_islemler.Toplama(Gelensayi, Karakterler, Pozisyon,OlusmaEfektleri);
+                Matematiksel_iþlemler.Toplama(Gelensayi, Karakterler, Pozisyon,OlusmaEfektleri);
                 break;
 
             case "Cikarma":
-                Matematiksel_islemler.Cikarma(Gelensayi, Karakterler, YokOlmaEfektleri);
+                Matematiksel_iþlemler.Cikarma(Gelensayi, Karakterler, YokOlmaEfektleri);
                 break;
 
 
             case "Bolme":
-                Matematiksel_islemler.Bolme(Gelensayi, Karakterler,YokOlmaEfektleri);
+                Matematiksel_iþlemler.Bolme(Gelensayi, Karakterler,YokOlmaEfektleri);
                 break;
 
         }
