@@ -35,8 +35,13 @@ public class GameManeger : MonoBehaviour
                 Matematiksel_iþlemler.Toplama(Gelensayi, Karakterler, Pozisyon,OlusmaEfektleri);
                 break;
 
+<<<<<<< HEAD
             case "Cýkarma":
                 Matematiksel_iþlemler.Cýkarma(Gelensayi, Karakterler,YokOlmaEfektleri);
+=======
+            case "Cikarma":
+                Matematiksel_iþlemler.Cikarma(Gelensayi, Karakterler);
+>>>>>>> 4460a4f1b6ba6cdc4a672b3078919ec6dc565161
                 break;
 
 

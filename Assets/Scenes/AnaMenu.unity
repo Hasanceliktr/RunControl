@@ -541,7 +541,11 @@ GameObject:
   - component: {fileID: 207755316}
   - component: {fileID: 207755315}
   m_Layer: 5
+<<<<<<< HEAD
   m_Name: LevelSec
+=======
+  m_Name: Button (2)
+>>>>>>> 4460a4f1b6ba6cdc4a672b3078919ec6dc565161
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -611,6 +615,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 207755316}
   m_OnClick:
     m_PersistentCalls:
+<<<<<<< HEAD
       m_Calls:
       - m_Target: {fileID: 2139294301}
         m_TargetAssemblyTypeName: AnaMenu_Manager, Assembly-CSharp
@@ -624,6 +629,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+=======
+      m_Calls: []
+>>>>>>> 4460a4f1b6ba6cdc4a672b3078919ec6dc565161
 --- !u!114 &207755316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -675,7 +683,11 @@ GameObject:
   - component: {fileID: 261895058}
   - component: {fileID: 261895057}
   m_Layer: 5
+<<<<<<< HEAD
   m_Name: Ozellestir
+=======
+  m_Name: Button (1)
+>>>>>>> 4460a4f1b6ba6cdc4a672b3078919ec6dc565161
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -745,6 +757,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 261895058}
   m_OnClick:
     m_PersistentCalls:
+<<<<<<< HEAD
       m_Calls:
       - m_Target: {fileID: 2139294301}
         m_TargetAssemblyTypeName: AnaMenu_Manager, Assembly-CSharp
@@ -758,6 +771,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+=======
+      m_Calls: []
+>>>>>>> 4460a4f1b6ba6cdc4a672b3078919ec6dc565161
 --- !u!114 &261895058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -832,7 +848,11 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
+<<<<<<< HEAD
   m_AnchoredPosition: {x: -1.0112305, y: -0.000061035156}
+=======
+  m_AnchoredPosition: {x: -1.0112305, y: -0.000030517578}
+>>>>>>> 4460a4f1b6ba6cdc4a672b3078919ec6dc565161
   m_SizeDelta: {x: -2.022, y: 90.3876}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &418597605
@@ -886,7 +906,11 @@ GameObject:
   - component: {fileID: 434271658}
   - component: {fileID: 434271657}
   m_Layer: 5
+<<<<<<< HEAD
   m_Name: Market
+=======
+  m_Name: Button (3)
+>>>>>>> 4460a4f1b6ba6cdc4a672b3078919ec6dc565161
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -956,6 +980,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 434271658}
   m_OnClick:
     m_PersistentCalls:
+<<<<<<< HEAD
       m_Calls:
       - m_Target: {fileID: 2139294301}
         m_TargetAssemblyTypeName: AnaMenu_Manager, Assembly-CSharp
@@ -969,6 +994,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+=======
+      m_Calls: []
+>>>>>>> 4460a4f1b6ba6cdc4a672b3078919ec6dc565161
 --- !u!114 &434271658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1020,7 +1048,11 @@ GameObject:
   - component: {fileID: 495710280}
   - component: {fileID: 495710279}
   m_Layer: 5
+<<<<<<< HEAD
   m_Name: Oyna
+=======
+  m_Name: Button
+>>>>>>> 4460a4f1b6ba6cdc4a672b3078919ec6dc565161
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1090,6 +1122,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 495710280}
   m_OnClick:
     m_PersistentCalls:
+<<<<<<< HEAD
       m_Calls:
       - m_Target: {fileID: 2139294301}
         m_TargetAssemblyTypeName: AnaMenu_Manager, Assembly-CSharp
@@ -1103,6 +1136,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+=======
+      m_Calls: []
+>>>>>>> 4460a4f1b6ba6cdc4a672b3078919ec6dc565161
 --- !u!114 &495710280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1961,7 +1997,11 @@ GameObject:
   - component: {fileID: 1689247447}
   - component: {fileID: 1689247446}
   m_Layer: 5
+<<<<<<< HEAD
   m_Name: Cikis
+=======
+  m_Name: Button (5)
+>>>>>>> 4460a4f1b6ba6cdc4a672b3078919ec6dc565161
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2031,6 +2071,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1689247447}
   m_OnClick:
     m_PersistentCalls:
+<<<<<<< HEAD
       m_Calls:
       - m_Target: {fileID: 2139294301}
         m_TargetAssemblyTypeName: AnaMenu_Manager, Assembly-CSharp
@@ -2044,6 +2085,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+=======
+      m_Calls: []
+>>>>>>> 4460a4f1b6ba6cdc4a672b3078919ec6dc565161
 --- !u!114 &1689247447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2230,7 +2274,11 @@ GameObject:
   - component: {fileID: 1935877840}
   - component: {fileID: 1935877839}
   m_Layer: 5
+<<<<<<< HEAD
   m_Name: Ayarlar
+=======
+  m_Name: Button (4)
+>>>>>>> 4460a4f1b6ba6cdc4a672b3078919ec6dc565161
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2300,6 +2348,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1935877840}
   m_OnClick:
     m_PersistentCalls:
+<<<<<<< HEAD
       m_Calls:
       - m_Target: {fileID: 2139294301}
         m_TargetAssemblyTypeName: AnaMenu_Manager, Assembly-CSharp
@@ -2313,6 +2362,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+=======
+      m_Calls: []
+>>>>>>> 4460a4f1b6ba6cdc4a672b3078919ec6dc565161
 --- !u!114 &1935877840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2445,6 +2497,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+<<<<<<< HEAD
 --- !u!1 &2139294300
 GameObject:
   m_ObjectHideFlags: 0
@@ -2489,3 +2542,5 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> 4460a4f1b6ba6cdc4a672b3078919ec6dc565161

@@ -4,5 +4,23 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/AnaMenu.unity
+    guid: 5f091e482a5f4fc4bb2f2cce9a8e561b
+  - enabled: 1
+    path: Assets/Scenes/Ozellestir.unity
+    guid: 3496d921c7839804395a29ed3286a0e9
+  - enabled: 1
+    path: Assets/Scenes/LevelSec.unity
+    guid: 660e60f18c7bc2b43aaad7387bd40132
+  - enabled: 1
+    path: Assets/Scenes/Market.unity
+    guid: 4d0bb585f7af2e64e9e4e21192f388f7
+  - enabled: 1
+    path: Assets/Scenes/Ayarlar.unity
+    guid: 8b131518678b1234982ad48e6871c243
+  - enabled: 1
+    path: Assets/Scenes/Level1.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}
