@@ -107,11 +107,8 @@ namespace olcay
 
         }
 
-<<<<<<< HEAD
-        public static void Cýkarma(int GelenSayi, List<GameObject> Karakterler, List<GameObject> YokOlmaEfektleri)
-=======
+
         public static void Cikarma(int GelenSayi, List<GameObject> Karakterler)
->>>>>>> 4460a4f1b6ba6cdc4a672b3078919ec6dc565161
         {
 
             if (GameManeger.AnlikKarakterSayisi < GelenSayi)
