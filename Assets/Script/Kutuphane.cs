@@ -6,14 +6,14 @@ using UnityEngine;
 namespace olcay
 {
 
-
+    
 
 
     public class Matematiksel_iþlemler : MonoBehaviour
     {
-    
-    
-       public static void Carpma(int GelenSayi,List<GameObject> Karakterler,Transform Pozisyon, List<GameObject> OlusturmaEfektleri)
+        
+
+        public static void Carpma(int GelenSayi,List<GameObject> Karakterler,Transform Pozisyon, List<GameObject> OlusturmaEfektleri)
         {
             int DonguSayisi = (GameManeger.AnlikKarakterSayisi * GelenSayi) - GameManeger.AnlikKarakterSayisi;
             int sayi = 0;
@@ -108,7 +108,7 @@ namespace olcay
         }
 
 
-        public static void Cikarma(int GelenSayi, List<GameObject> Karakterler)
+        public static void Cikarma(int GelenSayi, List<GameObject> Karakterler,List<GameObject> YokOlmaEfektleri)
         {
 
             if (GameManeger.AnlikKarakterSayisi < GelenSayi)
