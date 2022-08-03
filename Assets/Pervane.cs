@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pervane1 : MonoBehaviour
+public class Pervane : MonoBehaviour
 {
     public Animator Animator;
 
