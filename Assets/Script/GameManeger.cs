@@ -12,6 +12,7 @@ public class GameManeger : MonoBehaviour
     public List<GameObject> Karakterler;
     public List<GameObject> OlusmaEfektleri;
     public List<GameObject> YokOlmaEfektleri;
+    public List<GameObject> AdamLekesiEfektleri;
     void Start()
     {
 
@@ -49,10 +50,9 @@ public class GameManeger : MonoBehaviour
 
     }
   
-    public void YokolmaEfektiOlustur(Vector3 Pozisyon)
+    public void YokolmaEfektiOlustur(Vector3 Pozisyon,bool Balyoz=false)
     {
         foreach (var item in YokOlmaEfektleri)
-
         {
             if (!item.activeInHierarchy)
             {
@@ -64,9 +64,24 @@ public class GameManeger : MonoBehaviour
             }
         }
 
+        if (Balyoz)
+        {
 
-
+            Vector3 yeniPoz = new Vector3(Pozisyon.x, .005f, Pozisyon.z);
+            foreach (var item in AdamLekesiEfektleri)
+            {
+                if (!item.activeInHierarchy)
+                {
+                    item.SetActive(true);
+                    item.transform.position = yeniPoz;
+                    break;
+                }
+            }
+        }
     }
+
+    
+    
 }
         
 

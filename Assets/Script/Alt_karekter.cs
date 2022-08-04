@@ -52,8 +52,16 @@ public class Alt_karekter : MonoBehaviour
             gameObject.SetActive(false);
 
         }
+        if (other.CompareTag("Balyoz"))
+        {
+            Vector3 yeniPoz = new Vector3(transform.position.x, .23f, transform.position.z);
+            GameObject.FindWithTag("GameManager").GetComponent<GameManeger>().YokolmaEfektiOlustur(yeniPoz,true);
+            
+            gameObject.SetActive(false);
 
+        }
 
+        
     }
 
 }
