@@ -8,6 +8,7 @@ public class Rüzgar : MonoBehaviour
     {
         if (other.CompareTag("AltKarekterler"))
         {
+            Debug.Log("Rüzgar alanına giriş yapıldı.");
 
             other.GetComponent<Rigidbody>().AddForce(new Vector3(-5, 0, 0), ForceMode.Impulse);
         }

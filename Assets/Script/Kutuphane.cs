@@ -110,20 +110,16 @@ namespace olcay
 
         public static void Cikarma(int GelenSayi, List<GameObject> Karakterler,List<GameObject> YokOlmaEfektleri)
         {
-            Debug.Log("!!!!!!!!!!!!!!!!! Cikarma efecti olmalý");
 
             if (GameManeger.AnlikKarakterSayisi < GelenSayi)
             {
                 foreach (var item in Karakterler)
                 {
-                    Debug.Log("!!!!!!!!!!!!!!!!! Cikaasrma efecti olmalý");
                     foreach (var item2 in YokOlmaEfektleri)
                     {
-                        Debug.Log("!!!!!!!!!!asd!!!!!ad!! asCikaasrma efecti olmalý");
 
                         if (!item2.activeInHierarchy)
                         {
-                            Debug.Log("!!!!!!!!!!!!!!!!! Cikarmaasd efecti olmalý");
 
                             Vector3 yeniPoz = new Vector3(item.transform.position.x, .23f, item.transform.position.z);
                             item2.SetActive(true);
