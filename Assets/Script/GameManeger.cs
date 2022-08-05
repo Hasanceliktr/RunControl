@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using olcay;
+using Olcay;
 public class GameManeger : MonoBehaviour
 {
 
@@ -59,6 +59,7 @@ public class GameManeger : MonoBehaviour
                 item.SetActive(true);
                 item.transform.position = Pozisyon;
                 item.GetComponent<ParticleSystem>().Play();
+                item.GetComponent<AudioSource>().Play();
                 AnlikKarakterSayisi--;
                 break;
             }

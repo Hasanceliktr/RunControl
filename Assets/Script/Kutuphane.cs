@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace olcay
+namespace Olcay
 {
 
     
@@ -36,6 +36,7 @@ namespace olcay
                                     item2.SetActive(true);
                                     item2.transform.position = Pozisyon.position;
                                     item2.GetComponent<ParticleSystem>().Play();
+                                    item2.GetComponent<AudioSource>().Play();
                                     break;
 
                                 }
@@ -79,6 +80,7 @@ namespace olcay
                                 item2.SetActive(true);
                                 item2.transform.position = Pozisyon.position;
                                 item2.GetComponent<ParticleSystem>().Play();
+                                item2.GetComponent<AudioSource>().Play();
                                 break;
 
                             }
@@ -107,7 +109,6 @@ namespace olcay
 
         }
 
-
         public static void Cikarma(int GelenSayi, List<GameObject> Karakterler,List<GameObject> YokOlmaEfektleri)
         {
 
@@ -125,6 +126,8 @@ namespace olcay
                             item2.SetActive(true);
                             item2.transform.position = yeniPoz;
                             item2.GetComponent<ParticleSystem>().Play();
+                            item2.GetComponent<AudioSource>().Play();
+
                             break;
 
                         }
@@ -209,6 +212,7 @@ namespace olcay
                             item2.SetActive(true);
                             item2.transform.position = yeniPoz;
                             item2.GetComponent<ParticleSystem>().Play();
+                            item2.GetComponent<AudioSource>().Play();
                             break;
 
                         }
@@ -290,6 +294,19 @@ namespace olcay
 
             }
 
+        }
+    }
+
+    public class BellekYonetim
+    {
+        public void KontrolEtVeTanimla()
+        {
+            if (!PlayerPrefs.HasKey("SonLevel"))
+            {
+                PlayerPrefs.SetInt("SonLevel",5);
+                PlayerPrefs.SetInt("Puan",100);
+
+            }
         }
     }
    
