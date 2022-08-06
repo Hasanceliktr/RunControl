@@ -15,13 +15,16 @@ public class Dusman : MonoBehaviour
 
     public void AnimasyonTetikle()
     {
-        GetComponent<Animator>().SetBool("Saldiri", true);
+        GetComponent<Animator>().SetBool("Saldir", true);
         Saldiri_Basladimi = true;
     }
     // Update is called once per frame
     void Update()
     {
-        if(Saldiri_Basladimi)
-        _Navmesh.SetDestination(Saldiri_Hedefi.transform.position);
+        if (Saldiri_Basladimi)
+        {
+            _Navmesh.SetDestination(Saldiri_Hedefi.transform.position);
+        }
+        
     }
 }
