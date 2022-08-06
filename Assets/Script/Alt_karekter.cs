@@ -4,64 +4,52 @@ using UnityEngine;
 using UnityEngine.AI;
 public class Alt_karekter : MonoBehaviour
 {
-    GameObject Target;
+    
     NavMeshAgent _NavMesh;
+    public GameManeger _Gamemanager;
+    public GameObject Target;
     void Start()
     {
         _NavMesh = GetComponent<NavMeshAgent>();
-        Target = GameObject.FindWithTag("GameManager").GetComponent<GameManeger>().VarisNoktasi;
     }
 
-    // Update is called once per frame
     private void LateUpdate()
     {
-
         _NavMesh.SetDestination(Target.transform.position);
+    }
+    Vector3 Pozisyonver()
+    {
+      
+        return new Vector3(transform.position.x, .23f, transform.position.z);
 
     }
-
     private void OnTriggerEnter (Collider other)
-    
     {
         if (other.CompareTag("igneliKutu")) 
-        
         {
-            Vector3 yeniPoz = new Vector3(transform.position.x, .23f,transform.position.z);
-
-            GameObject.FindWithTag("GameManager").GetComponent<GameManeger>().YokolmaEfektiOlustur(yeniPoz);
+            _Gamemanager.YokolmaEfektiOlustur(Pozisyonver());
             gameObject.SetActive(false);
-
         }
-        if (other.CompareTag("Testere"))
-
+        else if (other.CompareTag("Testere"))
         {
-            Vector3 yeniPoz = new Vector3(transform.position.x, .23f, transform.position.z);
-
-            GameObject.FindWithTag("GameManager").GetComponent<GameManeger>().YokolmaEfektiOlustur(yeniPoz);
+            _Gamemanager.YokolmaEfektiOlustur(Pozisyonver());
             gameObject.SetActive(false);
-
         }
-
-        if (other.CompareTag("Pervaneigneler"))
-
+        else if (other.CompareTag("Pervaneigneler"))
         {
-            Vector3 yeniPoz = new Vector3(transform.position.x, .23f, transform.position.z);
-
-            GameObject.FindWithTag("GameManager").GetComponent<GameManeger>().YokolmaEfektiOlustur(yeniPoz);
+            _Gamemanager.YokolmaEfektiOlustur(Pozisyonver());
             gameObject.SetActive(false);
-
         }
-        if (other.CompareTag("Balyoz"))
+        else if (other.CompareTag("Balyoz"))
         {
-            Vector3 yeniPoz = new Vector3(transform.position.x, .23f, transform.position.z);
-            GameObject.FindWithTag("GameManager").GetComponent<GameManeger>().YokolmaEfektiOlustur(yeniPoz,true);
-            
+            _Gamemanager.YokolmaEfektiOlustur(Pozisyonver(), true);
             gameObject.SetActive(false);
-
         }
-
-        
+        else if (other.CompareTag("Dusman"))
+        {
+            _Gamemanager.YokolmaEfektiOlustur(Pozisyonver(), false,false);
+            gameObject.SetActive(false);
+        }
     }
-
 }
 

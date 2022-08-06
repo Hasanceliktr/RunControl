@@ -5,26 +5,30 @@ using UnityEngine.AI;
 
 public class Dusman : MonoBehaviour
 {
-   public GameObject Saldiri_Hedefi;
-    NavMeshAgent _Navmesh;
+    public GameObject Saldiri_Hedefi;
+    public NavMeshAgent _Navmesh;
+    public Animator _Animator;
+    public GameManeger _Gamemanager;
     bool Saldiri_Basladimi;
-    void Start()
-    {
-        _Navmesh = GetComponent<NavMeshAgent>();
-    }
-
+   
     public void AnimasyonTetikle()
     {
-        GetComponent<Animator>().SetBool("Saldir", true);
+        _Animator.SetBool("Saldir", true);
         Saldiri_Basladimi = true;
     }
-    // Update is called once per frame
     void Update()
     {
-        if (Saldiri_Basladimi)
+        if(Saldiri_Basladimi)
+        _Navmesh.SetDestination(Saldiri_Hedefi.transform.position);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("AltKarekterler"))
         {
-            _Navmesh.SetDestination(Saldiri_Hedefi.transform.position);
+            Vector3 yeniPoz = new Vector3(transform.position.x, .23f, transform.position.z);
+            _Gamemanager.YokolmaEfektiOlustur(yeniPoz, false, true);
+            gameObject.SetActive(false);
         }
-        
     }
 }

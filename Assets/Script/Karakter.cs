@@ -5,7 +5,7 @@ using UnityEngine;
 public class Karakter : MonoBehaviour
 {
     public GameManeger _GameManeger;
-    public GameObject _Kamera;
+    public Kamera _Kamera;
     public bool SonaGeldikmi;
     public GameObject Gidecegiyer;
     private void FixedUpdate()
@@ -75,13 +75,25 @@ public class Karakter : MonoBehaviour
         else if (other.CompareTag("Sontetikleyici"))
         {
 
-            _Kamera.GetComponent<Kamera>().SonaGeldikmi = true;
+            _Kamera.SonaGeldikmi = true;
             _GameManeger.DusmanlariTetikle();
             SonaGeldikmi = true;
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Direk") || collision.gameObject.CompareTag("igneliKutu") || collision.gameObject.CompareTag("Pervaneigneler"))
+        {
+            if(transform.position.x > 0)
 
+            transform.position = new Vector3(transform.position.x - .2f, transform.position.y, transform.position.z);
+            else
+            transform.position = new Vector3(transform.position.x + .2f, transform.position.y, transform.position.z);
+        }
+    }
+
+    
 }
 
 
