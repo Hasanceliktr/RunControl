@@ -18,6 +18,7 @@ TagManager:
   - Dusman
   - Sontetikleyici
   - Direk
+  - BosKarakter
   layers:
   - Default
   - TransparentFX
