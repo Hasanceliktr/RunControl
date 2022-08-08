@@ -9,11 +9,11 @@ namespace Olcay
     
 
 
-    public class Matematiksel_islemler : MonoBehaviour
+    public class Matematiksel_islemler 
     {
         
 
-        public static void Carpma(int GelenSayi,List<GameObject> Karakterler,Transform Pozisyon, List<GameObject> OlusturmaEfektleri)
+        public void Carpma(int GelenSayi,List<GameObject> Karakterler,Transform Pozisyon, List<GameObject> OlusturmaEfektleri)
         {
             int DonguSayisi = (GameManeger.AnlikKarakterSayisi * GelenSayi) - GameManeger.AnlikKarakterSayisi;
             int sayi = 0;
@@ -62,7 +62,7 @@ namespace Olcay
 
         }
 
-        public static void Toplama(int GelenSayi, List<GameObject> Karakterler, Transform Pozisyon, List<GameObject> OlusturmaEfektleri)
+        public void Toplama(int GelenSayi, List<GameObject> Karakterler, Transform Pozisyon, List<GameObject> OlusturmaEfektleri)
         {
             int sayi2 = 0;
             foreach (var item in Karakterler)
@@ -109,7 +109,7 @@ namespace Olcay
 
         }
 
-        public static void Cikarma(int GelenSayi, List<GameObject> Karakterler,List<GameObject> YokOlmaEfektleri)
+        public void Cikarma(int GelenSayi, List<GameObject> Karakterler,List<GameObject> YokOlmaEfektleri)
         {
 
             if (GameManeger.AnlikKarakterSayisi < GelenSayi)
@@ -194,7 +194,7 @@ namespace Olcay
 
         }
 
-        public static void Bolme(int GelenSayi, List<GameObject> Karakterler,List<GameObject> YokOlmaEfektleri)
+        public void Bolme(int GelenSayi, List<GameObject> Karakterler,List<GameObject> YokOlmaEfektleri)
         {
 
             if (GameManeger.AnlikKarakterSayisi < 2)
@@ -299,6 +299,40 @@ namespace Olcay
 
     public class BellekYonetim
     {
+        public void VeriKaydet_string(string Key,string value)
+        {
+            PlayerPrefs.SetString(Key, value);
+            PlayerPrefs.Save();
+        }
+
+        public void VeriKaydetme_int(string Key,int value)
+        {
+            PlayerPrefs.SetInt(Key, value);
+            PlayerPrefs.Save();
+        }
+
+        public void VeriKaydet_float(string Key, float value)
+        {
+            PlayerPrefs.SetFloat(Key, value);
+            PlayerPrefs.Save();
+        }
+
+
+        public string VeriOku_s(string Key)
+        {
+           return PlayerPrefs.GetString(Key);
+        }
+
+        public int VeriOku_i(string Key)
+        {
+            return PlayerPrefs.GetInt(Key);
+        }
+
+        public float VeriOku_f(string Key)
+        {
+            return PlayerPrefs.GetFloat(Key);
+        }
+
         public void KontrolEtVeTanimla()
         {
             if (!PlayerPrefs.HasKey("SonLevel"))

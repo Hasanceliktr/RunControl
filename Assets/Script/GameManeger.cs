@@ -4,10 +4,6 @@ using UnityEngine;
 using Olcay;
 public class GameManeger : MonoBehaviour
 {
-
-
-
-    
     public static int AnlikKarakterSayisi = 1;
     public List<GameObject> Karakterler;
     public List<GameObject> OlusmaEfektleri;
@@ -20,6 +16,9 @@ public class GameManeger : MonoBehaviour
     public GameObject _AnaKarakter;
     public bool OyunBittimi;
     bool SonaGeldikmi;
+
+    Matematiksel_islemler _Matematiksel_Ýslemler = new Matematiksel_islemler();
+    BellekYonetim _BellekYonetim = new BellekYonetim();
     void Start()
     {
         DusmanlariOlustur();
@@ -44,11 +43,6 @@ public class GameManeger : MonoBehaviour
         }
         SonaGeldikmi = true;
         SavasDurumu();
-    }
-
-    void Update()
-    {
-       
     }
 
     void SavasDurumu()
@@ -89,20 +83,20 @@ public class GameManeger : MonoBehaviour
         switch (islemturu)
         {
             case "Carpma":
-                Matematiksel_islemler.Carpma(Gelensayi, Karakterler, Pozisyon,OlusmaEfektleri);
+                _Matematiksel_Ýslemler.Carpma(Gelensayi, Karakterler, Pozisyon,OlusmaEfektleri);
                 break;
 
             case "Toplama":
-                Matematiksel_islemler.Toplama(Gelensayi, Karakterler, Pozisyon,OlusmaEfektleri);
+                _Matematiksel_Ýslemler.Toplama(Gelensayi, Karakterler, Pozisyon,OlusmaEfektleri);
                 break;
 
             case "Cikarma":
-                Matematiksel_islemler.Cikarma(Gelensayi, Karakterler, YokOlmaEfektleri);
+                _Matematiksel_Ýslemler.Cikarma(Gelensayi, Karakterler, YokOlmaEfektleri);
                 break;
 
 
             case "Bolme":
-                Matematiksel_islemler.Bolme(Gelensayi, Karakterler,YokOlmaEfektleri);
+                _Matematiksel_Ýslemler.Bolme(Gelensayi, Karakterler,YokOlmaEfektleri);
                 break;
 
         }

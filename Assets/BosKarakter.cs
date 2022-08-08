@@ -11,22 +11,62 @@ public class BosKarakter : MonoBehaviour
     public Animator _Animator;
     public GameObject Target;
     bool Temasvar;
+    public GameManeger _GameManeger;
     private void LateUpdate()
     {
-        if (Temasvar)
-        {
+        if(Temasvar)
+       
             _NavMesh.SetDestination(Target.transform.position);
-        }
         
+        
+    }
+    Vector3 Pozisyonver()
+    {
+
+        return new Vector3(transform.position.x, .23f, transform.position.z);
+
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("AltKarekterler") || other.CompareTag("Player"))
         {
-            MaterialDegistirveAnimasyonTetikle();
-            Temasvar = true;
+
+            if (gameObject.CompareTag("BosKarakter"))
+            {
+                MaterialDegistirveAnimasyonTetikle();
+                Temasvar = true;
+            }
+        }
+        else if (other.CompareTag("igneliKutu"))
+        {
+            _GameManeger.YokolmaEfektiOlustur(Pozisyonver());
+            gameObject.SetActive(false);
+        }
+        else if (other.CompareTag("Testere"))
+        {
+            _GameManeger.YokolmaEfektiOlustur(Pozisyonver());
+            gameObject.SetActive(false);
+        }
+        else if (other.CompareTag("Pervaneigneler"))
+        {
+            _GameManeger.YokolmaEfektiOlustur(Pozisyonver());
+            gameObject.SetActive(false);
+        }
+        else if (other.CompareTag("Balyoz"))
+        {
+            _GameManeger.YokolmaEfektiOlustur(Pozisyonver(), true);
+            gameObject.SetActive(false);
         }
 
+
+
+
+        else if (other.CompareTag("Dusman"))
+        {
+            
+            _GameManeger.YokolmaEfektiOlustur(Pozisyonver(), false, false);
+            gameObject.SetActive(false);
+        }
     }
 
     void MaterialDegistirveAnimasyonTetikle()
@@ -35,7 +75,8 @@ public class BosKarakter : MonoBehaviour
         mats[0] = AtanacakOlanMateryal;
         _Renderer.materials = mats;
         _Animator.SetBool("Saldir",true);
-
+        gameObject.tag = "AltKarekterler";
+        GameManeger.AnlikKarakterSayisi++;
 
     }
 
