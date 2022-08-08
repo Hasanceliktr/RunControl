@@ -13,8 +13,11 @@ public class BosKarakter : MonoBehaviour
     bool Temasvar;
     private void LateUpdate()
     {
-        if(Temasvar)
-        _NavMesh.SetDestination(Target.transform.position);
+        if (Temasvar)
+        {
+            _NavMesh.SetDestination(Target.transform.position);
+        }
+        
     }
     private void OnTriggerEnter(Collider other)
     {
