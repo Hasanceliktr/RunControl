@@ -5,10 +5,11 @@ using UnityEngine.SceneManagement;
 using Olcay;
 public class AnaMenu_Manager : MonoBehaviour
 {
-    
+    BellekYonetim _BellekYonetim = new BellekYonetim();
+    public GameObject CikisPaneli;
     void Start()
     {
-        
+        _BellekYonetim.KontrolEtVeTanimla();
     }
 
     public void SahneYukle(int Index)
@@ -18,6 +19,16 @@ public class AnaMenu_Manager : MonoBehaviour
 
     public void Oyna()
     {
-        
+        SceneManager.LoadScene(_BellekYonetim.VeriOku_i("SonLevel"));
+    }
+    
+    public void CikisButonislem(string durum)
+    {
+        if (durum == "Evet")
+            Application.Quit();
+        else if (durum == "cikis")
+            CikisPaneli.SetActive(true);
+        else
+        CikisPaneli.SetActive(false);
     }
 }

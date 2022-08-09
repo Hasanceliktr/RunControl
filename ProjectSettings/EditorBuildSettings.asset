@@ -7,20 +7,38 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/AnaMenu.unity
-    guid: 5f091e482a5f4fc4bb2f2cce9a8e561b
+    guid: f0ed3289c755abd4695759f20f21ca18
   - enabled: 1
-    path: Assets/Scenes/Ozellestir.unity
-    guid: 3496d921c7839804395a29ed3286a0e9
+    path: "Assets/Scenes/\xD6zelle\u015Ftir.unity"
+    guid: 88ce53ff202624f47b13ff3a7efb94cf
   - enabled: 1
-    path: Assets/Scenes/LevelSec.unity
-    guid: 660e60f18c7bc2b43aaad7387bd40132
+    path: Assets/Scenes/Levelsec.unity
+    guid: fbe0e531b4699af49906f4461765920e
   - enabled: 1
     path: Assets/Scenes/Market.unity
-    guid: 4d0bb585f7af2e64e9e4e21192f388f7
+    guid: 517a535b646bef3418debde6d7501d3e
   - enabled: 1
     path: Assets/Scenes/Ayarlar.unity
-    guid: 8b131518678b1234982ad48e6871c243
+    guid: f45ebc5651099814b9a53fb9d4e71af1
   - enabled: 1
-    path: Assets/Scenes/Level1.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Scenes/Leveller/Level1.unity
+    guid: 6b24ce235564bd549bfa2856848679a4
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}
