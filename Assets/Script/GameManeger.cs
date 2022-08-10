@@ -74,6 +74,20 @@ public class GameManeger : MonoBehaviour
                 {
 
                 }
+                else
+                {
+                    if (AnlikKarakterSayisi > 5)
+                    {
+                        _BellekYonetim.VeriKaydetme_int("Puan", _BellekYonetim.VeriOku_i("Puan") + 600);
+                        _BellekYonetim.VeriKaydetme_int("SonLevel", _BellekYonetim.VeriOku_i("SonLevel") + 1);
+
+
+                    }
+                    
+                    else
+                        _BellekYonetim.VeriKaydetme_int("Puan", _BellekYonetim.VeriOku_i("Puan") + 200);
+                    _BellekYonetim.VeriKaydetme_int("SonLevel", _BellekYonetim.VeriOku_i("SonLevel")+1);
+                }
             }
         }
     }
