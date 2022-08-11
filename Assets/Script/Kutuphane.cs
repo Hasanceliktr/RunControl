@@ -1,6 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using GoogleMobileAds.Api;
+using System;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 
 namespace Olcay
@@ -342,6 +346,24 @@ namespace Olcay
 
             }
         }
+    }
+
+    //**Reklamlar**//
+
+    public class ReklamYonetim
+    {
+        private InterstitialAd interstitial;
+
+        public void RequestInterstitial()
+        {
+           
+   
+
+        }
+
+
+
+
     }
    
 }
