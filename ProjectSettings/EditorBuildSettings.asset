@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: "Assets/Scenes/\xD6zelle\u015Ftir.unity"
     guid: 88ce53ff202624f47b13ff3a7efb94cf
   - enabled: 1
-    path: Assets/Scenes/Levelsec.unity
+    path: Assets/Scenes/LevelSec.unity
     guid: fbe0e531b4699af49906f4461765920e
   - enabled: 1
     path: Assets/Scenes/Market.unity
@@ -21,8 +21,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Ayarlar.unity
     guid: f45ebc5651099814b9a53fb9d4e71af1
   - enabled: 1
-    path: Assets/Scenes/Leveller/Level1.unity
-    guid: 6b24ce235564bd549bfa2856848679a4
+    path: Assets/Scenes/Level1.unity
+    guid: 9c88c8bbdfb001a4fba06f9934fdfe49
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
