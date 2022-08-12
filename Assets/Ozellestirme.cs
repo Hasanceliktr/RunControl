@@ -9,20 +9,25 @@ public class Ozellestirme : MonoBehaviour
 {
     public Text PuanText;
     public Text SapkaText;
+    public GameObject[] islemPanelleri;
+    public GameObject islemCanvasi;
+    public GameObject[] GenelObjeler;
+    int AktifislemPaneliIndex;
     [Header("SAPKALAR")]
     public GameObject[] Sapkalar;
     public Button[] SapkaButonlari;
     [Header("SOPALAR")]
     public GameObject[] Sopalar;
+    public Button[] SopaButonlari;
     [Header("MATERÝYAL")]
     public Material[] Materyaller;
-    
+    public Button[] MateryalButonlari;
 
     int SapkaIndex = -1;
 
     BellekYonetim _BellekYonetim = new BellekYonetim();
-    VeriYonetim _VeriYonetim = new VeriYonetim();
-
+    VeriYonetimi _VeriYonetim = new VeriYonetimi();
+    [Header("GENEL VERÝLER")]
     public List<ItemBilgileri> _ItemBilgileri = new List<ItemBilgileri>();
 
     void Start()
@@ -66,12 +71,14 @@ public class Ozellestirme : MonoBehaviour
             {
                 SapkaIndex = 0;
                 Sapkalar[SapkaIndex].SetActive(true);
+                SapkaText.text=_ItemBilgileri[SapkaIndex].Item_Ad;
             }
             else
             {
                 Sapkalar[SapkaIndex].SetActive(false);
                 SapkaIndex++;
                 Sapkalar[SapkaIndex].SetActive(true);
+                SapkaText.text = _ItemBilgileri[SapkaIndex].Item_Ad;
             }
 
             //------------------------------
@@ -96,6 +103,7 @@ public class Ozellestirme : MonoBehaviour
                 {
                     Sapkalar[SapkaIndex].SetActive(true);
                     SapkaButonlari[0].interactable = true;
+                    SapkaText.text = _ItemBilgileri[SapkaIndex].Item_Ad;
 
                 }
                 else
@@ -107,6 +115,7 @@ public class Ozellestirme : MonoBehaviour
             else
             {
                 SapkaButonlari[0].interactable = false;
+                SapkaText.text = "Sapka yok";
             }
             //-----------------------------------------------
             if (SapkaIndex != Sapkalar.Length - 1)
@@ -115,4 +124,24 @@ public class Ozellestirme : MonoBehaviour
         }
     }
   
+
+
+    public void islemPaneliCikart(int Index)
+    {
+        GenelObjeler[2].SetActive(true);
+        AktifislemPaneliIndex = Index;
+        islemPanelleri[Index].SetActive(true);
+        GenelObjeler[3].SetActive(true);
+        islemCanvasi.SetActive(false);
+       
+    }
+    public void GeriDon()
+    {
+        GenelObjeler[2].SetActive(false);
+        islemCanvasi.SetActive(true);
+        GenelObjeler[3].SetActive(false);
+        islemPanelleri[AktifislemPaneliIndex].SetActive(false);
+        
+        
+    }
 }

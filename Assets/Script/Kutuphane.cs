@@ -387,21 +387,19 @@ namespace Olcay
 
     }
 
-    public class VeriYonetim
+    public class VeriYonetimi
     {
         public void Save(List<ItemBilgileri> _ItemBilgileri)
         {
-            //_ItemBilgileri[1].SatinAlmaDurumu = true;
-            _ItemBilgileri.Add(new ItemBilgileri());
+            
+            
             BinaryFormatter bf = new BinaryFormatter();
-            FileStream file = File.Create(Application.persistentDataPath + "/ItemVerileri.gd");
+            FileStream file = File.OpenWrite(Application.persistentDataPath + "/ItemVerileri.gd");
             bf.Serialize(file, _ItemBilgileri);
             file.Close();
-
-
         }
+       
         List<ItemBilgileri> _ItemicListe;
-
         public void Load()
         {
             if (File.Exists(Application.persistentDataPath + "/ItemVerileri.gd"))
@@ -419,6 +417,19 @@ namespace Olcay
             return _ItemicListe;
             
         }
+
+        public void ilkKurulumDosyaOlusturma(List<ItemBilgileri> _ItemBilgileri)
+        {
+
+            if (!File.Exists(Application.persistentDataPath + "/ItemVerileri.gd"))
+            {
+                BinaryFormatter bf = new BinaryFormatter();
+                FileStream file = File.Create(Application.persistentDataPath + "/ItemVerileri.gd");
+                bf.Serialize(file, _ItemBilgileri);
+                file.Close();
+            }
+        }
+
     }
 
 }

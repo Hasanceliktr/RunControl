@@ -6,10 +6,13 @@ using Olcay;
 public class AnaMenu_Manager : MonoBehaviour
 {
     BellekYonetim _BellekYonetim = new BellekYonetim();
+    VeriYonetimi _VeriYonetim = new VeriYonetimi();
     public GameObject CikisPaneli;
+    public List<ItemBilgileri> _ItemBilgileri = new List<ItemBilgileri>();
     void Start()
     {
         _BellekYonetim.KontrolEtVeTanimla();
+        //_VeriYonetim.ilkKurulumDosyaOlusturma(_ItemBilgileri);
     }
 
     public void SahneYukle(int Index)
