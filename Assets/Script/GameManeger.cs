@@ -127,6 +127,7 @@ public class GameManeger : MonoBehaviour
                 item.SetActive(true);
                 item.transform.position = Pozisyon;
                 item.GetComponent<ParticleSystem>().Play();
+                item.GetComponent<AudioSource>().Play();
                 if (!Durum)
                     AnlikKarakterSayisi--;
                 else

@@ -7,15 +7,13 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
 
+
 namespace Olcay
 {
-
-    
 
 
     public class Matematiksel_islemler 
     {
-        
 
         public void Carpma(int GelenSayi,List<GameObject> Karakterler,Transform Pozisyon, List<GameObject> OlusturmaEfektleri)
         {
@@ -167,6 +165,7 @@ namespace Olcay
                                     item2.SetActive(true);
                                     item2.transform.position = yeniPoz;
                                     item2.GetComponent<ParticleSystem>().Play();
+                                    item2.GetComponent<AudioSource>().Play();
                                     break;
 
                                 }
@@ -253,6 +252,8 @@ namespace Olcay
                                     item2.SetActive(true);
                                     item2.transform.position = yeniPoz;
                                     item2.GetComponent<ParticleSystem>().Play();
+                                    item2.GetComponent<AudioSource>().Play();
+
                                     break;
 
                                 }
@@ -346,6 +347,7 @@ namespace Olcay
 
             }
         }
+
     }
 
     //**Reklamlar**//
@@ -366,4 +368,57 @@ namespace Olcay
 
     }
    
+    public class Verilerimiz
+    {
+        public static List<ItemBilgileri> _ItemBilgileri = new List<ItemBilgileri>();
+
+
+    }
+
+
+    [Serializable]
+    public class ItemBilgileri
+    {
+        public int GrupIndex;
+        public int Item_Index;
+        public string Item_Ad;
+        public int Puan;
+        public bool SatinAlmaDurumu;
+
+    }
+
+    public class VeriYonetim
+    {
+        public void Save(List<ItemBilgileri> _ItemBilgileri)
+        {
+            //_ItemBilgileri[1].SatinAlmaDurumu = true;
+            _ItemBilgileri.Add(new ItemBilgileri());
+            BinaryFormatter bf = new BinaryFormatter();
+            FileStream file = File.Create(Application.persistentDataPath + "/ItemVerileri.gd");
+            bf.Serialize(file, _ItemBilgileri);
+            file.Close();
+
+
+        }
+        List<ItemBilgileri> _ItemicListe;
+
+        public void Load()
+        {
+            if (File.Exists(Application.persistentDataPath + "/ItemVerileri.gd"))
+            {
+                BinaryFormatter bf = new BinaryFormatter();
+                FileStream file = File.Open(Application.persistentDataPath + "/ItemVerileri.gd", FileMode.Open);
+                _ItemicListe = (List<ItemBilgileri>)bf.Deserialize(file);
+                file.Close();
+
+            }
+        }
+
+        public List<ItemBilgileri> ListeyiAktar()
+        {
+            return _ItemicListe;
+            
+        }
+    }
+
 }

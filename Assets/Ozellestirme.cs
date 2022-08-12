@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Olcay;
 
+
 public class Ozellestirme : MonoBehaviour
 {
     public Text PuanText;
@@ -20,6 +21,10 @@ public class Ozellestirme : MonoBehaviour
     int SapkaIndex = -1;
 
     BellekYonetim _BellekYonetim = new BellekYonetim();
+    VeriYonetim _VeriYonetim = new VeriYonetim();
+
+    public List<ItemBilgileri> _ItemBilgileri = new List<ItemBilgileri>();
+
     void Start()
     {
         _BellekYonetim.VeriKaydetme_int("AktifSapka", -1);
@@ -41,10 +46,16 @@ public class Ozellestirme : MonoBehaviour
             SapkaIndex = _BellekYonetim.VeriOku_i("AktifSapka");
             Sapkalar[SapkaIndex].SetActive(true);
         }
+
+        _VeriYonetim.Save(_ItemBilgileri);
+
+        _VeriYonetim.Load();
+        _ItemBilgileri = _VeriYonetim.ListeyiAktar();
         
         
     }
 
+    
 
     public void Sapka_Yonbutonlari(string islem)
     {

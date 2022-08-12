@@ -35,6 +35,7 @@ public class BosKarakter : MonoBehaviour
             {
                 MaterialDegistirveAnimasyonTetikle();
                 Temasvar = true;
+                GetComponent<AudioSource>().Play();
             }
         }
         else if (other.CompareTag("igneliKutu"))
