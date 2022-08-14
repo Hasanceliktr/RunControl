@@ -392,7 +392,6 @@ namespace Olcay
         public void Save(List<ItemBilgileri> _ItemBilgileri)
         {
             
-            
             BinaryFormatter bf = new BinaryFormatter();
             FileStream file = File.OpenWrite(Application.persistentDataPath + "/ItemVerileri.gd");
             bf.Serialize(file, _ItemBilgileri);

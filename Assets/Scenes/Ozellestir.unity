@@ -659,7 +659,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 391990753}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 501297704}
+        m_TargetAssemblyTypeName: Ozellestirme, Assembly-CSharp
+        m_MethodName: Kaydet
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &391990753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -996,7 +1008,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 501297704}
         m_TargetAssemblyTypeName: Ozellestirme, Assembly-CSharp
-        m_MethodName: Sapka_Yonbutonlari
+        m_MethodName: Material_Yonbutonlari
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1357,17 +1369,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PuanText: {fileID: 1555019409}
-  SapkaText: {fileID: 1216377700}
   islemPanelleri:
   - {fileID: 82897889}
   - {fileID: 1301365116}
   - {fileID: 1878330733}
   islemCanvasi: {fileID: 1477279361}
-  GenelObjeler:
-  - {fileID: 518290608}
-  - {fileID: 391990750}
+  GenelPaneller:
   - {fileID: 583693257}
   - {fileID: 1029405974}
+  islemButonlari:
+  - {fileID: 518290610}
+  - {fileID: 391990752}
+  SatinAlmaText: {fileID: 1937258692}
+  SapkaText: {fileID: 1216377700}
   Sapkalar:
   - {fileID: 919132149494853737}
   - {fileID: 919132148396316358}
@@ -1375,6 +1389,7 @@ MonoBehaviour:
   SapkaButonlari:
   - {fileID: 1255855949}
   - {fileID: 969152925}
+  SopaText: {fileID: 1718946701}
   Sopalar:
   - {fileID: 919132149488751495}
   - {fileID: 919132148682222922}
@@ -1382,6 +1397,7 @@ MonoBehaviour:
   SopaButonlari:
   - {fileID: 1781965377}
   - {fileID: 1291700074}
+  MaterialText: {fileID: 1481223800}
   Materyaller:
   - {fileID: 2100000, guid: 421993c0ed3aaed4ea1285dad82da9e5, type: 2}
   - {fileID: 2100000, guid: 1c6a1a7adaf94c44a83af9c4a87fbe8f, type: 2}
@@ -1391,21 +1407,22 @@ MonoBehaviour:
   MateryalButonlari:
   - {fileID: 438016046}
   - {fileID: 1961591890}
+  _Renderer: {fileID: 3765067655359883679}
   _ItemBilgileri:
   - GrupIndex: 1
     Item_Index: 0
     Item_Ad: Sapka 1
-    Puan: 250
+    Puan: 350
     SatinAlmaDurumu: 0
   - GrupIndex: 1
     Item_Index: 1
-    Item_Ad: Sapka 2
+    Item_Ad: Sapka 1
     Puan: 480
     SatinAlmaDurumu: 0
   - GrupIndex: 1
     Item_Index: 2
     Item_Ad: Sapka 3
-    Puan: 860
+    Puan: 850
     SatinAlmaDurumu: 0
   - GrupIndex: 2
     Item_Index: 0
@@ -1421,6 +1438,31 @@ MonoBehaviour:
     Item_Index: 2
     Item_Ad: Sopa 3
     Puan: 750
+    SatinAlmaDurumu: 0
+  - GrupIndex: 3
+    Item_Index: 0
+    Item_Ad: 'Tema 1 '
+    Puan: 0
+    SatinAlmaDurumu: 0
+  - GrupIndex: 3
+    Item_Index: 1
+    Item_Ad: Tema 2
+    Puan: 150
+    SatinAlmaDurumu: 0
+  - GrupIndex: 3
+    Item_Index: 2
+    Item_Ad: Tema 3
+    Puan: 300
+    SatinAlmaDurumu: 0
+  - GrupIndex: 3
+    Item_Index: 3
+    Item_Ad: Tema 4
+    Puan: 500
+    SatinAlmaDurumu: 0
+  - GrupIndex: 3
+    Item_Index: 4
+    Item_Ad: Tema 5
+    Puan: 800
     SatinAlmaDurumu: 0
 --- !u!1 &518290608
 GameObject:
@@ -1505,7 +1547,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 518290611}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 501297704}
+        m_TargetAssemblyTypeName: Ozellestirme, Assembly-CSharp
+        m_MethodName: SatinAl
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &518290611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2802,7 +2856,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 501297704}
         m_TargetAssemblyTypeName: Ozellestirme, Assembly-CSharp
-        m_MethodName: Sapka_Yonbutonlari
+        m_MethodName: Sopa_Yonbutonlari
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3413,7 +3467,7 @@ GameObject:
   - component: {fileID: 1481223801}
   - component: {fileID: 1481223800}
   m_Layer: 5
-  m_Name: SapkaText
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3950,7 +4004,7 @@ GameObject:
   - component: {fileID: 1718946702}
   - component: {fileID: 1718946701}
   m_Layer: 5
-  m_Name: SapkaText
+  m_Name: Sopa Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4104,7 +4158,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 501297704}
         m_TargetAssemblyTypeName: Ozellestirme, Assembly-CSharp
-        m_MethodName: Sapka_Yonbutonlari
+        m_MethodName: Sopa_Yonbutonlari
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4781,7 +4835,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 501297704}
         m_TargetAssemblyTypeName: Ozellestirme, Assembly-CSharp
-        m_MethodName: Sapka_Yonbutonlari
+        m_MethodName: Material_Yonbutonlari
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
