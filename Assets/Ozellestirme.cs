@@ -99,7 +99,7 @@ public class Ozellestirme : MonoBehaviour
             {
                 Sapkalar[SapkaIndex].SetActive(false);
                 SapkaIndex--;
-                if (SapkaIndex != 1)
+                if (SapkaIndex != -1)
                 {
                     Sapkalar[SapkaIndex].SetActive(true);
                     SapkaButonlari[0].interactable = true;

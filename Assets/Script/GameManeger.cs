@@ -19,9 +19,12 @@ public class GameManeger : MonoBehaviour
 
     Matematiksel_islemler _Matematiksel_Ýslemler = new Matematiksel_islemler();
     BellekYonetim _BellekYonetim = new BellekYonetim();
+    ReklamYonetim _ReklamYonetim = new ReklamYonetim();
     void Start()
     {
         DusmanlariOlustur();
+        _ReklamYonetim.RequestInterstitial();
+        
     }
 
     public void DusmanlariOlustur()
@@ -70,6 +73,7 @@ public class GameManeger : MonoBehaviour
 
                 _AnaKarakter.GetComponent<Animator>().SetBool("Saldir", false);
 
+                _ReklamYonetim.GecisRekalamiGoster();
                 if (AnlikKarakterSayisi < KacDusmanOlsun || AnlikKarakterSayisi == KacDusmanOlsun)
                 {
 

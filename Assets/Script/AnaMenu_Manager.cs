@@ -9,10 +9,18 @@ public class AnaMenu_Manager : MonoBehaviour
     VeriYonetimi _VeriYonetim = new VeriYonetimi();
     public GameObject CikisPaneli;
     public List<ItemBilgileri> _ItemBilgileri = new List<ItemBilgileri>();
+    ReklamYonetim _ReklamYonetim = new ReklamYonetim();
+
+
+
     void Start()
     {
         _BellekYonetim.KontrolEtVeTanimla();
+
         //_VeriYonetim.ilkKurulumDosyaOlusturma(_ItemBilgileri);
+
+        _ReklamYonetim.RequestRewardedAd();
+        _ReklamYonetim.OdulluReklamGoster();
     }
 
     public void SahneYukle(int Index)
@@ -22,7 +30,9 @@ public class AnaMenu_Manager : MonoBehaviour
 
     public void Oyna()
     {
-        SceneManager.LoadScene(_BellekYonetim.VeriOku_i("SonLevel"));
+        SceneManager.LoadScene("Level1");
+        //Daha sonrasýnda son level olarak düzenlecek
+        //SceneManager.LoadScene(_BellekYonetim.VeriOku_i("SonLevel"));
     }
     
     public void CikisButonislem(string durum)

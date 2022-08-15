@@ -1,10 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using GoogleMobileAds.Api;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using UnityEngine;
 
 
 
@@ -330,6 +329,7 @@ namespace Olcay
 
         public int VeriOku_i(string Key)
         {
+
             return PlayerPrefs.GetInt(Key);
         }
 
@@ -344,7 +344,7 @@ namespace Olcay
             {
                 PlayerPrefs.SetInt("SonLevel",5);
                 PlayerPrefs.SetInt("Puan",100);
-
+                PlayerPrefs.SetInt("GecisReklamiSayisi",1);
             }
         }
 
@@ -356,18 +356,112 @@ namespace Olcay
     {
         private InterstitialAd interstitial;
 
+        private RewardedAd _RewardedAd;
+        //GECÝS REKLAMI
         public void RequestInterstitial()
         {
-           
-   
+
+            string AdUnitId;
+        #if UNITY_ANDROID
+            AdUnitId = "ca-app-pub-3940256099942544/1033173712";
+
+        #elif UNITY_IPHONE
+            AdUnitId = "ca-app-pub-3940256099942544/4411468910";
+
+        #else 
+            AdUnitId = "unexpected_platform";
+#endif
+
+            interstitial = new InterstitialAd(AdUnitId);
+            AdRequest request = new AdRequest.Builder().Build();
+            interstitial.LoadAd(request);
+
+            interstitial.OnAdClosed += GecisReklamiKapatildi;
 
         }
 
+        void GecisReklamiKapatildi(object sender, EventArgs args)
+        {
+            interstitial.Destroy();
+            RequestInterstitial();
 
+        }
+        
+        public void GecisRekalamiGoster()
+        {
 
+            if (PlayerPrefs.GetInt("GecisReklamiSayisi")==2)
+            {
+                if (interstitial.IsLoaded())
+                {
+                    PlayerPrefs.SetInt("GecisReklamiSayisi",0);
+                    interstitial.Show();
+                }
+                else
+                {
+                    interstitial.Destroy();
+                    RequestInterstitial();
+                }
+            }
+            else
+            {
+                PlayerPrefs.SetInt("GecisReklamiSayisi",PlayerPrefs.GetInt("GecisReklamiSayisi"+1));
+            }
 
+           
+        }
+        //ODULLU REKLAM
+
+        public void RequestRewardedAd()
+        {
+            string AdUnitId;
+#if UNITY_ANDROID
+            AdUnitId = "ca-app-pub-3940256099942544/5224354917";
+
+#elif UNITY_IPHONE
+            AdUnitId = "ca-app-pub-3940256099942544/1712485313";
+
+#else
+            AdUnitId = "unexpected_platform";
+#endif
+
+            _RewardedAd = new RewardedAd(AdUnitId);
+            AdRequest request = new AdRequest.Builder().Build();
+            _RewardedAd.LoadAd(request);
+
+            _RewardedAd.OnUserEarnedReward += OdulluReklamTamamlandi;
+            _RewardedAd.OnAdClosed += OdulluReklamKapatildi;
+            _RewardedAd.OnAdLoaded += OdulluReklamKYuklendi;
+
+        }
+
+        private void OdulluReklamTamamlandi(object sender, Reward e)
+        {
+            Debug.Log("ödül alýndý");
+        }
+
+        private void OdulluReklamKapatildi(object sender, EventArgs e)
+        {
+            Debug.Log("Reklam kapatildi yenide nload edilecek");
+            RequestRewardedAd();
+        }
+
+        private void OdulluReklamKYuklendi(object sender, EventArgs e)
+        {
+            Debug.Log("Reklam yüklendi");
+        }
+
+        public void OdulluReklamGoster()
+        {
+            if (_RewardedAd.IsLoaded())
+            {
+                _RewardedAd.Show();
+            }
+        }
+
+        
     }
-   
+
     public class Verilerimiz
     {
         public static List<ItemBilgileri> _ItemBilgileri = new List<ItemBilgileri>();
