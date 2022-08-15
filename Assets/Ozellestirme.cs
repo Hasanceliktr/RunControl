@@ -82,10 +82,10 @@ public class Ozellestirme : MonoBehaviour
         }
         else
         {
-<<<<<<< HEAD
+
             SopaIndex = _BellekYonetim.VeriOku_i("AktifSopa");
             Sopalar[SopaIndex].SetActive(true);
-=======
+
             if (SapkaIndex != -1)
             {
                 Sapkalar[SapkaIndex].SetActive(false);
@@ -95,7 +95,7 @@ public class Ozellestirme : MonoBehaviour
                     Sapkalar[SapkaIndex].SetActive(true);
                     SapkaButonlari[0].interactable = true;
                     SapkaText.text = _ItemBilgileri[SapkaIndex].Item_Ad;
->>>>>>> Hasan
+
 
         }
 
