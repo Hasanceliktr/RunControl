@@ -959,7 +959,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 109.6894, y: 0.63708}
+  m_AnchoredPosition: {x: 131, y: 0.63708}
   m_SizeDelta: {x: 112.0494, y: 111.16}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &438016046
@@ -1008,14 +1008,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 501297704}
         m_TargetAssemblyTypeName: Ozellestirme, Assembly-CSharp
-        m_MethodName: GeriDon
-        m_Mode: 1
+        m_MethodName: Material_Yonbutonlari
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: geri
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &438016047
@@ -1392,6 +1392,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 4ddad9219786a4b4da5c0570f8368c58, type: 2}
   - {fileID: 2100000, guid: 0db02f937b32e884c9c12ab45a52b65f, type: 2}
   - {fileID: 2100000, guid: abf4a99b643765c43992d6b6d57d69f2, type: 2}
+  VarsayilanTema: {fileID: 2100000, guid: 421993c0ed3aaed4ea1285dad82da9e5, type: 2}
   MateryalButonlari:
   - {fileID: 438016046}
   - {fileID: 1961591890}
@@ -1404,7 +1405,7 @@ MonoBehaviour:
     SatinAlmaDurumu: 0
   - GrupIndex: 1
     Item_Index: 1
-    Item_Ad: Sapka 1
+    Item_Ad: ' Sapka 2'
     Puan: 480
     SatinAlmaDurumu: 0
   - GrupIndex: 1
@@ -1603,7 +1604,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &583693258
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4223,7 +4224,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1878330734
 RectTransform:
   m_ObjectHideFlags: 0
