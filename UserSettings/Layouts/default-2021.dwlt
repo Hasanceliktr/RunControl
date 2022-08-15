@@ -47,7 +47,11 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 1
+<<<<<<< HEAD
   controlID: 79
+=======
+  controlID: 47
+>>>>>>> Hasan
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -63,12 +67,21 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 281.6
     y: 0
     width: 387.99997
     height: 468
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
+=======
+    x: 405
+    y: 0
+    width: 503
+    height: 612
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+>>>>>>> Hasan
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -90,12 +103,21 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 669.6
     y: 0
     width: 539.2001
     height: 468
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
+=======
+    x: 908
+    y: 0
+    width: 637
+    height: 612
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+>>>>>>> Hasan
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -196,7 +218,11 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
+<<<<<<< HEAD
   controlID: 80
+=======
+  controlID: 48
+>>>>>>> Hasan
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -221,7 +247,11 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
+<<<<<<< HEAD
   controlID: 56
+=======
+  controlID: 49
+>>>>>>> Hasan
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -247,7 +277,11 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
+<<<<<<< HEAD
   controlID: 57
+=======
+  controlID: 50
+>>>>>>> Hasan
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -265,8 +299,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 281.6
     height: 468
+=======
+    width: 405
+    height: 612
+>>>>>>> Hasan
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 16}
@@ -290,9 +329,15 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 468
     width: 1208.8
     height: 254.79999
+=======
+    y: 612
+    width: 1545
+    height: 327
+>>>>>>> Hasan
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 19}
@@ -319,10 +364,17 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1208.8
     y: 0
+<<<<<<< HEAD
     width: 327.19995
     height: 722.8
   m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
+=======
+    width: 375
+    height: 939
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+>>>>>>> Hasan
   m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 21}
@@ -359,7 +411,11 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
+<<<<<<< HEAD
   m_LastSelectedObjectID: 23372
+=======
+  m_LastSelectedObjectID: -17240
+>>>>>>> Hasan
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -462,9 +518,15 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 73.6
     width: 280.6
     height: 447
+=======
+    y: 73
+    width: 404
+    height: 591
+>>>>>>> Hasan
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -472,6 +534,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
       m_SelectedIDs: 1c5b0000
       m_LastClickedID: 23324
       m_ExpandedIDs: dc5bffff505effff2afbffff4c5b0000825b0000
@@ -479,13 +542,26 @@ MonoBehaviour:
         m_UserAcceptedRename: 0
         m_Name: 
         m_OriginalName: 
+=======
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: f453ffff22bfffff32c7ffffe0e4ffff36fbffff3a63000068630000ce630000d872010004830100
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: "Say\u0131salBlok (3)"
+        m_OriginalName: "Say\u0131salBlok (3)"
+>>>>>>> Hasan
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
+<<<<<<< HEAD
         m_UserData: 0
+=======
+        m_UserData: 102808
+>>>>>>> Hasan
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 11
@@ -518,10 +594,17 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 281.6
     y: 73.6
     width: 385.99997
     height: 447
+=======
+    x: 405
+    y: 73
+    width: 501
+    height: 591
+>>>>>>> Hasan
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -723,9 +806,15 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
     m_Target: {x: 373.43494, y: 1632.1687, z: 0}
     speed: 2
     m_Value: {x: 373.43494, y: 1632.1687, z: 0}
+=======
+    m_Target: {x: 0.04673599, y: 0.7095279, z: -13.03554}
+    speed: 2
+    m_Value: {x: 0.04673599, y: 0.7095279, z: -13.03554}
+>>>>>>> Hasan
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -772,6 +861,7 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
+<<<<<<< HEAD
     m_Target: {x: -0.14764895, y: -0.017513707, z: 0.0025675236, w: -0.98890007}
     speed: 2
     m_Value: {x: -0.14764623, y: -0.017513385, z: 0.0025674766, w: -0.9888819}
@@ -779,6 +869,15 @@ MonoBehaviour:
     m_Target: 1526.1945
     speed: 2
     m_Value: 1526.1945
+=======
+    m_Target: {x: -0.33801275, y: 0.04994034, z: -0.017967513, w: -0.93965036}
+    speed: 2
+    m_Value: {x: -0.3380107, y: 0.049940035, z: -0.017967403, w: -0.93964463}
+  m_Size:
+    m_Target: 1.2800882
+    speed: 2
+    m_Value: 1.2800882
+>>>>>>> Hasan
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -796,8 +895,13 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
+<<<<<<< HEAD
   m_LastSceneViewRotation: {x: -0.035370667, y: -0.026370293, z: -0.00093476323, w: 0.99902964}
   m_LastSceneViewOrtho: 1
+=======
+  m_LastSceneViewRotation: {x: -0.0029718927, y: 0.43955156, z: -0.001456036, w: -0.89821863}
+  m_LastSceneViewOrtho: 0
+>>>>>>> Hasan
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
   m_SceneVisActive: 1
@@ -823,10 +927,17 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 669.60004
     y: 73.6
     width: 537.2001
     height: 447
+=======
+    x: 908
+    y: 73
+    width: 635
+    height: 591
+>>>>>>> Hasan
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -873,16 +984,24 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
+<<<<<<< HEAD
       width: 537.2001
       height: 426
     m_Scale: {x: 0.27734375, y: 0.27734375}
     m_Translation: {x: 268.60004, y: 213}
+=======
+      width: 635
+      height: 570
+    m_Scale: {x: 0.296875, y: 0.296875}
+    m_Translation: {x: 317.5, y: 285}
+>>>>>>> Hasan
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
       x: -968.4734
       y: -768
       width: 1936.9468
@@ -890,6 +1009,15 @@ MonoBehaviour:
     m_MinimalGUI: 1
   m_defaultScale: 0.27734375
   m_LastWindowPixelSize: {x: 671.5001, y: 558.75}
+=======
+      x: -1069.4736
+      y: -960
+      width: 2138.9473
+      height: 1920
+    m_MinimalGUI: 1
+  m_defaultScale: 0.296875
+  m_LastWindowPixelSize: {x: 635, y: 591}
+>>>>>>> Hasan
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -948,10 +1076,17 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 120}
     m_SelectedIDs: fa5d0000
     m_LastClickedID: 24058
     m_ExpandedIDs: 00000000ea5d0000ec5d0000ee5d0000f05d0000f25d0000f45d0000fc5d0000
+=======
+    scrollPos: {x: 0, y: 102}
+    m_SelectedIDs: 665f0000
+    m_LastClickedID: 24422
+    m_ExpandedIDs: 00000000e25e0000e45e0000e65e0000e85e000000ca9a3b
+>>>>>>> Hasan
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -979,7 +1114,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000ea5d0000ec5d0000ee5d0000f05d0000f25d0000f45d0000f65d0000f85d0000fa5d0000fc5d0000
+=======
+    m_ExpandedIDs: 00000000e25e0000e45e0000e65e0000e85e0000
+>>>>>>> Hasan
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1006,19 +1145,32 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
+<<<<<<< HEAD
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000166e0000d271010016ac0000ca71000000000000f85c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: Ninja 0
       m_OriginalName: Ninja 0
+=======
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: c6230000166e0000d271010016ac000000000000
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: Level1
+      m_OriginalName: Level1
+>>>>>>> Hasan
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
+<<<<<<< HEAD
       m_UserData: 38222
+=======
+      m_UserData: 25292
+>>>>>>> Hasan
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -1055,10 +1207,17 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 0
     y: 544
     width: 1235
     height: 231.4
+=======
+    x: 961
+    y: 687
+    width: 770
+    height: 303
+>>>>>>> Hasan
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
