@@ -128,7 +128,8 @@ public class Ozellestirme : MonoBehaviour
 
 
             }
-
+        }
+    }
             public void SatinAl()
             {
                 if (AktifislemPaneliIndex != -1)
@@ -370,6 +371,6 @@ public class Ozellestirme : MonoBehaviour
             }
 
         }
-    }
+    
    
 
