@@ -82,8 +82,20 @@ public class Ozellestirme : MonoBehaviour
         }
         else
         {
+
             SopaIndex = _BellekYonetim.VeriOku_i("AktifSopa");
             Sopalar[SopaIndex].SetActive(true);
+
+            if (SapkaIndex != -1)
+            {
+                Sapkalar[SapkaIndex].SetActive(false);
+                SapkaIndex--;
+                if (SapkaIndex != -1)
+                {
+                    Sapkalar[SapkaIndex].SetActive(true);
+                    SapkaButonlari[0].interactable = true;
+                    SapkaText.text = _ItemBilgileri[SapkaIndex].Item_Ad;
+
 
         }
 
