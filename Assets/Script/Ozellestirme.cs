@@ -47,65 +47,78 @@ public class Ozellestirme : MonoBehaviour
         PuanText.text = _BellekYonetim.VeriOku_i("Puan").ToString();
 
 
-        if (_BellekYonetim.VeriOku_i("AktifSapka") == -1)
-        {
-
-            foreach (var item in Sapkalar)
-            {
-                item.SetActive(false);
-            }
-            SapkaIndex = -1;
-            SapkaText.text = "Sapka yok";
+        
 
 
-        }
-        else
-        {
-            SapkaIndex = _BellekYonetim.VeriOku_i("AktifSapka");
-            Sapkalar[SapkaIndex].SetActive(true);
+             //_VeriYonetim.Save(_ItemBilgileri);
+
+            _VeriYonetim.Load();
+            _ItemBilgileri = _VeriYonetim.ListeyiAktar();
+
+
 
 
         }
 
+    void DurumuKontrolEt(int Bolum)
+    {
+        
 
-        if (_BellekYonetim.VeriOku_i("AktifSopa") == -1)
-        {
-
-            foreach (var item in Sopalar)
+            if (Bolum == 0)
             {
-                item.SetActive(false);
-            }
-            SopaIndex = -1;
-            SopaText.text = "Sopa yok";
-
-
-        }
-        else
-        {
-
-            SopaIndex = _BellekYonetim.VeriOku_i("AktifSopa");
-            Sopalar[SopaIndex].SetActive(true);
-
-            if (SapkaIndex != -1)
-            {
-                Sapkalar[SapkaIndex].SetActive(false);
-                SapkaIndex--;
-                if (SapkaIndex != -1)
+                #region
+                if (_BellekYonetim.VeriOku_i("AktifSapka") == -1)
                 {
-                    Sapkalar[SapkaIndex].SetActive(true);
-                    SapkaButonlari[0].interactable = true;
-                    SapkaText.text = _ItemBilgileri[SapkaIndex].Item_Ad;
+
+                    foreach (var item in Sapkalar)
+                    {
+                        item.SetActive(false);
+                    }
+                    SapkaIndex = -1;
+                    SapkaText.text = "Sapka yok";
 
 
                 }
+                else
+                {
+                    SapkaIndex = _BellekYonetim.VeriOku_i("AktifSapka");
+                    Sapkalar[SapkaIndex].SetActive(true);
 
+
+                }
+                #endregion
+
+            }
+            else if (Bolum == 1)
+            {
+                #region
+                if (_BellekYonetim.VeriOku_i("AktifSopa") == -1)
+                {
+
+                    foreach (var item in Sopalar)
+                    {
+                        item.SetActive(false);
+                    }
+                    SopaIndex = -1;
+                    SopaText.text = "Sopa yok";
+
+
+                }
+                else
+                {
+
+                    SopaIndex = _BellekYonetim.VeriOku_i("AktifSopa");
+                    Sopalar[SopaIndex].SetActive(true);
+                }
+                #endregion
+
+            }
+            else
+            {
                 if (_BellekYonetim.VeriOku_i("AktifTema") == -1)
                 {
-                    Material[] mats = _Renderer.materials;
-                    mats[0] = Materyaller[0];
-                    _Renderer.materials = mats;
-                    MaterialIndex = -1;
-                    MaterialText.text = "Tema yok";
+                MaterialIndex = -1;
+                MaterialText.text = "Tema yok";
 
 
                 }
@@ -116,20 +129,14 @@ public class Ozellestirme : MonoBehaviour
                     mats[0] = Materyaller[MaterialIndex];
                     _Renderer.materials = mats;
 
+
                 }
 
-
-                // _VeriYonetim.Save(_ItemBilgileri);
-
-                _VeriYonetim.Load();
-                _ItemBilgileri = _VeriYonetim.ListeyiAktar();
-
-
-
-
             }
-        }
     }
+    
+    
+    
             public void SatinAl()
             {
                 if (AktifislemPaneliIndex != -1)
