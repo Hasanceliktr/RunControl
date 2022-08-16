@@ -344,6 +344,9 @@ namespace Olcay
             {
                 PlayerPrefs.SetInt("SonLevel",5);
                 PlayerPrefs.SetInt("Puan",100);
+                PlayerPrefs.SetInt("AktifSapka", -1);
+                PlayerPrefs.SetInt("AktifSopa", -1);
+                PlayerPrefs.SetInt("AktifTema", -1);
                 PlayerPrefs.SetInt("GecisReklamiSayisi",1);
             }
         }

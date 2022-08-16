@@ -16,8 +16,7 @@ public class AnaMenu_Manager : MonoBehaviour
     void Start()
     {
         _BellekYonetim.KontrolEtVeTanimla();
-
-        //_VeriYonetim.ilkKurulumDosyaOlusturma(_ItemBilgileri);
+        _VeriYonetim.ilkKurulumDosyaOlusturma(_ItemBilgileri);
 
         _ReklamYonetim.RequestRewardedAd();
         _ReklamYonetim.OdulluReklamGoster();

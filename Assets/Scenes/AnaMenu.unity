@@ -2865,7 +2865,62 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CikisPaneli: {fileID: 1378512329}
-  _ItemBilgileri: []
+  _ItemBilgileri:
+  - GrupIndex: 1
+    Item_Index: 0
+    Item_Ad: Sapka 1
+    Puan: 350
+    SatinAlmaDurumu: 0
+  - GrupIndex: 1
+    Item_Index: 1
+    Item_Ad: Sapka 2
+    Puan: 480
+    SatinAlmaDurumu: 0
+  - GrupIndex: 1
+    Item_Index: 2
+    Item_Ad: Sapka 3
+    Puan: 850
+    SatinAlmaDurumu: 0
+  - GrupIndex: 2
+    Item_Index: 0
+    Item_Ad: Sopa 1
+    Puan: 300
+    SatinAlmaDurumu: 0
+  - GrupIndex: 2
+    Item_Index: 1
+    Item_Ad: Sopa 2
+    Puan: 500
+    SatinAlmaDurumu: 0
+  - GrupIndex: 2
+    Item_Index: 2
+    Item_Ad: Sopa 3
+    Puan: 750
+    SatinAlmaDurumu: 0
+  - GrupIndex: 3
+    Item_Index: 0
+    Item_Ad: 'Tema 1 '
+    Puan: 0
+    SatinAlmaDurumu: 0
+  - GrupIndex: 3
+    Item_Index: 1
+    Item_Ad: Tema 2
+    Puan: 150
+    SatinAlmaDurumu: 0
+  - GrupIndex: 3
+    Item_Index: 2
+    Item_Ad: Tema 3
+    Puan: 300
+    SatinAlmaDurumu: 0
+  - GrupIndex: 3
+    Item_Index: 3
+    Item_Ad: Tema 4
+    Puan: 500
+    SatinAlmaDurumu: 0
+  - GrupIndex: 3
+    Item_Index: 4
+    Item_Ad: Tema 5
+    Puan: 800
+    SatinAlmaDurumu: 0
 --- !u!4 &2033977940
 Transform:
   m_ObjectHideFlags: 0
