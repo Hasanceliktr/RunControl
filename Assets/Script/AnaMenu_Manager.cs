@@ -30,9 +30,9 @@ public class AnaMenu_Manager : MonoBehaviour
 
     public void Oyna()
     {
-        SceneManager.LoadScene("Level1");
+       // SceneManager.LoadScene("Level1");
         //Daha sonrasýnda son level olarak düzenlecek
-        //SceneManager.LoadScene(_BellekYonetim.VeriOku_i("SonLevel"));
+        SceneManager.LoadScene(_BellekYonetim.VeriOku_i("SonLevel"));
     }
     
     public void CikisButonislem(string durum)
