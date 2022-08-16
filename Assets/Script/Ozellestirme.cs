@@ -43,18 +43,17 @@ public class Ozellestirme : MonoBehaviour
     public Animator Kaydedildi_Animator;
     void Start()
     {
-        
-       // _BellekYonetim.VeriKaydetme_int("Puan", 6400);
+
+
         PuanText.text = _BellekYonetim.VeriOku_i("Puan").ToString();
 
-        
 
         _VeriYonetim.Load();
         _ItemBilgileri = _VeriYonetim.ListeyiAktar();
 
-        DurumuKontrolEt(0,true);
-        DurumuKontrolEt(1,true);
-        DurumuKontrolEt(2,true);
+        DurumuKontrolEt(0, true);
+        DurumuKontrolEt(1, true);
+        DurumuKontrolEt(2, true);
     }
 
     void DurumuKontrolEt(int Bolum, bool islem = false)
