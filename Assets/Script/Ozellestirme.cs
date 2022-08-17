@@ -30,6 +30,7 @@ public class Ozellestirme : MonoBehaviour
     public Material VarsayilanTema;
     public Button[] MateryalButonlari;
     public SkinnedMeshRenderer _Renderer;
+    public AudioSource[] Sesler;
 
     int SapkaIndex = -1;
     int SopaIndex = -1;
@@ -179,36 +180,25 @@ public class Ozellestirme : MonoBehaviour
 
         }
     }
+    
 
     public void SatinAl()
     {
+        Sesler[0].Play();
         if (AktifislemPaneliIndex != -1)
         {
             switch (AktifislemPaneliIndex)
             {
                 case 0:
-                    _ItemBilgileri[SapkaIndex].SatinAlmaDurumu = true;
-                    _BellekYonetim.VeriKaydetme_int("Puan", _BellekYonetim.VeriOku_i("Puan") - _ItemBilgileri[SapkaIndex].Puan);
-                    SatinAlmaText.text = "SATIN AL";
-                    islemButonlari[0].interactable = false;
-                    islemButonlari[1].interactable = true;
-                    PuanText.text = _BellekYonetim.VeriOku_i("Puan").ToString();
+                    SatinAlmaSonuc(SapkaIndex);
                     break;
                 case 1:
-                    _ItemBilgileri[SopaIndex +3 ].SatinAlmaDurumu = true;
-                    _BellekYonetim.VeriKaydetme_int("Puan", _BellekYonetim.VeriOku_i("Puan") - _ItemBilgileri[SopaIndex + 3].Puan);
-                    SatinAlmaText.text = "SATIN AL";
-                    islemButonlari[0].interactable = false;
-                    islemButonlari[1].interactable = true;
-                    PuanText.text = _BellekYonetim.VeriOku_i("Puan").ToString();
+                    int Index = SopaIndex + 3;
+                    SatinAlmaSonuc(Index);
                     break;
                 case 2:
-                    _ItemBilgileri[MaterialIndex + 6].SatinAlmaDurumu = true;
-                    _BellekYonetim.VeriKaydetme_int("Puan", _BellekYonetim.VeriOku_i("Puan") - _ItemBilgileri[MaterialIndex + 6].Puan);
-                    SatinAlmaText.text = "SATIN AL";
-                    islemButonlari[0].interactable = false;
-                    islemButonlari[1].interactable = true;
-                    PuanText.text = _BellekYonetim.VeriOku_i("Puan").ToString();
+                    int Index2 = MaterialIndex + 6;
+                    SatinAlmaSonuc(Index2);
                     break;
             }
         }
@@ -216,29 +206,23 @@ public class Ozellestirme : MonoBehaviour
 
     }
 
+    
+
     public void Kaydet()
     {
+        Sesler[2].Play();
         if (AktifislemPaneliIndex != -1)
         {
             switch (AktifislemPaneliIndex)
             {
                 case 0:
-                    _BellekYonetim.VeriKaydetme_int("AktifSapka", SapkaIndex);
-                    islemButonlari[1].interactable = false;
-                    if (!Kaydedildi_Animator.GetBool("ok"))
-                        Kaydedildi_Animator.SetBool("ok", true);
+                    KaydetmeSonuc("AktifSapka", SapkaIndex);
                     break;
                 case 1:
-                    _BellekYonetim.VeriKaydetme_int("AktifSopa", SopaIndex);
-                    islemButonlari[1].interactable = false;
-                    if (!Kaydedildi_Animator.GetBool("ok"))
-                        Kaydedildi_Animator.SetBool("ok", true);
+                    KaydetmeSonuc("AktifSopa", SopaIndex);
                     break;
                 case 2:
-                    _BellekYonetim.VeriKaydetme_int("AktifTema", MaterialIndex);
-                    islemButonlari[1].interactable = false;
-                    if (!Kaydedildi_Animator.GetBool("ok"))
-                        Kaydedildi_Animator.SetBool("ok", true);
+                    KaydetmeSonuc("AktifTema", MaterialIndex);
                     break;
             }
         }
@@ -246,6 +230,7 @@ public class Ozellestirme : MonoBehaviour
     }
     public void Sapka_Yonbutonlari(string islem)
     {
+        Sesler[0].Play();
         if (islem == "ileri")
         {
 
@@ -604,6 +589,7 @@ public class Ozellestirme : MonoBehaviour
     }
     public void islemPaneliCikart(int Index)
     {
+        Sesler[0].Play();
         DurumuKontrolEt(Index);
         GenelPaneller[0].SetActive(true);
         AktifislemPaneliIndex = Index;
@@ -614,6 +600,7 @@ public class Ozellestirme : MonoBehaviour
     }
     public void GeriDon()
     {
+        Sesler[0].Play();
         GenelPaneller[0].SetActive(false);
         islemCanvasi.SetActive(true);
         GenelPaneller[1].SetActive(false);
@@ -626,9 +613,27 @@ public class Ozellestirme : MonoBehaviour
     
     public void AnaMenuyeDon()
     {
+        Sesler[0].Play();
         _VeriYonetim.Save(_ItemBilgileri);
         SceneManager.LoadScene(0);
         
+    }
+
+    public void SatinAlmaSonuc(int Index)
+    {
+        _ItemBilgileri[Index].SatinAlmaDurumu = true;
+        _BellekYonetim.VeriKaydetme_int("Puan", _BellekYonetim.VeriOku_i("Puan") - _ItemBilgileri[Index].Puan);
+        SatinAlmaText.text = "SATIN AL";
+        islemButonlari[0].interactable = false;
+        islemButonlari[1].interactable = true;
+        PuanText.text = _BellekYonetim.VeriOku_i("Puan").ToString();
+    }
+    public void KaydetmeSonuc(string Key, int Index)
+    {
+        _BellekYonetim.VeriKaydetme_int(Key, Index);
+        islemButonlari[1].interactable = false;
+        if (!Kaydedildi_Animator.GetBool("ok"))
+            Kaydedildi_Animator.SetBool("ok", true);
     }
 }
 

@@ -465,12 +465,7 @@ namespace Olcay
         
     }
 
-    public class Verilerimiz
-    {
-        public static List<ItemBilgileri> _ItemBilgileri = new List<ItemBilgileri>();
-
-
-    }
+    
 
 
     [Serializable]

@@ -11,7 +11,7 @@ public class Level_Manager : MonoBehaviour
     public Button[] Butonlar;
     public int Level;
     public Sprite KilitliButon;
-
+    public AudioSource ButonSes;
     BellekYonetim _BellekYonetim = new BellekYonetim();
     void Start()
     {
@@ -42,11 +42,13 @@ public class Level_Manager : MonoBehaviour
 
    public void SahneYukle(int Index)
     {
+        ButonSes.Play();
         SceneManager.LoadScene(Index);
 
     }
     public void GeriDon()
     {
+        ButonSes.Play();
         SceneManager.LoadScene(0);
     }
 }

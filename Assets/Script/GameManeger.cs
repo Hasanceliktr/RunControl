@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Olcay;
+using UnityEngine.SceneManagement;
 public class GameManeger : MonoBehaviour
 {
     public static int AnlikKarakterSayisi = 1;
@@ -28,14 +29,18 @@ public class GameManeger : MonoBehaviour
     Matematiksel_islemler _Matematiksel_Ýslemler = new Matematiksel_islemler();
     BellekYonetim _BellekYonetim = new BellekYonetim();
     ReklamYonetim _ReklamYonetim = new ReklamYonetim();
+
+    Scene _Scene;
     private void Awake()
     {
+        Destroy(GameObject.FindWithTag("MenuSes"));
         ItemleriKontrolEt();
     }
     void Start()
     {
         DusmanlariOlustur();
         _ReklamYonetim.RequestInterstitial();
+        _Scene = SceneManager.GetActiveScene();
         
     }
 
@@ -88,21 +93,36 @@ public class GameManeger : MonoBehaviour
                 _ReklamYonetim.GecisRekalamiGoster();
                 if (AnlikKarakterSayisi < KacDusmanOlsun || AnlikKarakterSayisi == KacDusmanOlsun)
                 {
-
+                    Debug.Log("Kaybettin.");
                 }
                 else
                 {
                     if (AnlikKarakterSayisi > 5)
                     {
-                        _BellekYonetim.VeriKaydetme_int("Puan", _BellekYonetim.VeriOku_i("Puan") + 600);
-                        _BellekYonetim.VeriKaydetme_int("SonLevel", _BellekYonetim.VeriOku_i("SonLevel") + 1);
+                       
+
+                        if (_Scene.buildIndex == _BellekYonetim.VeriOku_i("SonLevel"))
+                        {
+                            _BellekYonetim.VeriKaydetme_int("Puan", _BellekYonetim.VeriOku_i("Puan") + 600);
+                            _BellekYonetim.VeriKaydetme_int("SonLevel", _BellekYonetim.VeriOku_i("SonLevel") + 1);
+                        }
+
+                        
 
 
                     }
                     
                     else
-                        _BellekYonetim.VeriKaydetme_int("Puan", _BellekYonetim.VeriOku_i("Puan") + 200);
-                    _BellekYonetim.VeriKaydetme_int("SonLevel", _BellekYonetim.VeriOku_i("SonLevel")+1);
+                    {
+                        if (_Scene.buildIndex == _BellekYonetim.VeriOku_i("SonLevel"))
+                        {
+                            _BellekYonetim.VeriKaydetme_int("Puan", _BellekYonetim.VeriOku_i("Puan") + 200);
+                            _BellekYonetim.VeriKaydetme_int("SonLevel", _BellekYonetim.VeriOku_i("SonLevel") + 1);
+                        }
+                            
+                    }
+                    Debug.Log("Kazandýn");
+                        
                 }
             }
         }

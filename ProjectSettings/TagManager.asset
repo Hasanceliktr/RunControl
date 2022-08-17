@@ -19,6 +19,7 @@ TagManager:
   - Sontetikleyici
   - Direk
   - BosKarakter
+  - MenuSes
   layers:
   - Default
   - TransparentFX
