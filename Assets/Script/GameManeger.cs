@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Olcay;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class GameManeger : MonoBehaviour
 {
     public static int AnlikKarakterSayisi = 1;
@@ -31,8 +32,15 @@ public class GameManeger : MonoBehaviour
     ReklamYonetim _ReklamYonetim = new ReklamYonetim();
 
     Scene _Scene;
+    [Header("GENEL VERÝLER")]
+    public AudioSource[] Sesler;
+    public GameObject[] islemPanelleri;
+    public Slider OyunSesiAyar;
     private void Awake()
     {
+        Sesler[0].volume = _BellekYonetim.VeriOku_f("OyunSes");
+        OyunSesiAyar.value = _BellekYonetim.VeriOku_f("OyunSes");
+        Sesler[1].volume = _BellekYonetim.VeriOku_f("MenuFx");
         Destroy(GameObject.FindWithTag("MenuSes"));
         ItemleriKontrolEt();
     }
@@ -218,6 +226,54 @@ public class GameManeger : MonoBehaviour
         }
            
     }
+
+
+    public void CikisButonislem(string durum)
+    {
+        Sesler[1].Play();
+        Time.timeScale = 0;
+        if (durum == "durdur")
+        {
+            islemPanelleri[0].SetActive(true);
+        }
+        else if (durum == "devamet")
+        {
+            islemPanelleri[0].SetActive(false);
+            Time.timeScale = 1;
+        }
+        else if (durum == "tekrar")
+        {
+            SceneManager.LoadScene(_Scene.buildIndex);
+            Time.timeScale = 1;
+        }
+        else if (durum == "Anasayfa")
+        {
+            SceneManager.LoadScene(0);
+            Time.timeScale = 1;
+        }
+    }
+
+    public void Ayarlar(string durum)
+    {
+        if (durum == "ayarla")
+        {
+            islemPanelleri[1].SetActive(true);
+            Time.timeScale = 0;
+        }
+        else
+        {
+            islemPanelleri[1].SetActive(false);
+            Time.timeScale = 1;
+        }
+    }
+
+    public void SesiAyarla()
+    {
+        _BellekYonetim.VeriKaydet_float("OyunSes", OyunSesiAyar.value);
+        Sesler[0].volume = OyunSesiAyar.value;
+
+    }
+
 }
         
 

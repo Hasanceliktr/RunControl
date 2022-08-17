@@ -9,6 +9,7 @@ public class AnaMenu_Manager : MonoBehaviour
     VeriYonetimi _VeriYonetim = new VeriYonetimi();
     public GameObject CikisPaneli;
     public List<ItemBilgileri> _ItemBilgileri = new List<ItemBilgileri>();
+    public AudioSource ButonSes;
     ReklamYonetim _ReklamYonetim = new ReklamYonetim();
 
 
@@ -17,6 +18,7 @@ public class AnaMenu_Manager : MonoBehaviour
     {
         _BellekYonetim.KontrolEtVeTanimla();
         _VeriYonetim.ilkKurulumDosyaOlusturma(_ItemBilgileri);
+        ButonSes.volume = _BellekYonetim.VeriOku_f("MenuFx");
 
         _ReklamYonetim.RequestRewardedAd();
         _ReklamYonetim.OdulluReklamGoster();
@@ -36,6 +38,7 @@ public class AnaMenu_Manager : MonoBehaviour
     
     public void CikisButonislem(string durum)
     {
+        ButonSes.Play();
         if (durum == "Evet")
             Application.Quit();
         else if (durum == "cikis")

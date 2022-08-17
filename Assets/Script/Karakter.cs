@@ -35,6 +35,11 @@ public class Karakter : MonoBehaviour
         {
             float Fark = Vector3.Distance(transform.position, GecisNoktasi.transform.position);
             _Slider.value = Fark;
+
+
+           
+            
+
             if (Input.GetKey(KeyCode.Mouse0))
             {
 

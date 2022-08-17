@@ -347,6 +347,9 @@ namespace Olcay
                 PlayerPrefs.SetInt("AktifSapka", -1);
                 PlayerPrefs.SetInt("AktifSopa", -1);
                 PlayerPrefs.SetInt("AktifTema", -1);
+                PlayerPrefs.SetFloat("MenuSes", 1);
+                PlayerPrefs.SetFloat("MenuFx", 1);
+                PlayerPrefs.SetFloat("OyunSes", 1);
                 PlayerPrefs.SetInt("GecisReklamiSayisi",1);
             }
         }

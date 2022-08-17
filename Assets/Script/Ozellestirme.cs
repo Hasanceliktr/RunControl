@@ -42,6 +42,7 @@ public class Ozellestirme : MonoBehaviour
     public List<ItemBilgileri> _ItemBilgileri = new List<ItemBilgileri>();
 
     public Animator Kaydedildi_Animator;
+    
     void Start()
     {
 
@@ -55,6 +56,11 @@ public class Ozellestirme : MonoBehaviour
         DurumuKontrolEt(0, true);
         DurumuKontrolEt(1, true);
         DurumuKontrolEt(2, true);
+
+        foreach (var item in Sesler)
+        {
+            item.volume = _BellekYonetim.VeriOku_f("MenuFx");
+        }
     }
 
     void DurumuKontrolEt(int Bolum, bool islem = false)

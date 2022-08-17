@@ -3063,6 +3063,7 @@ MonoBehaviour:
     Item_Ad: Tema 5
     Puan: 800
     SatinAlmaDurumu: 0
+  ButonSes: {fileID: 0}
 --- !u!4 &2033977940
 Transform:
   m_ObjectHideFlags: 0

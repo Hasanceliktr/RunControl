@@ -10,22 +10,19 @@ public class MenuSes : MonoBehaviour
     void Start()
     {
        
-       // Ses.volume = PlayerPrefs.GetFloat("MenuSes"); // Buraya geleceðiz
+        Ses.volume = PlayerPrefs.GetFloat("MenuSes");
         DontDestroyOnLoad(gameObject);
 
         if (instance == null)
-        {
             instance = gameObject;
-        }
         else
-        {
             Destroy(gameObject);
-        }
+        
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
-        
+        Ses.volume = PlayerPrefs.GetFloat("MenuSes");
     }
 }
