@@ -35,14 +35,16 @@ public class Ozellestirme : MonoBehaviour
     int SapkaIndex = -1;
     int SopaIndex = -1;
     int MaterialIndex = -1;
-
+    public Animator Kaydedildi_Animator;
     BellekYonetim _BellekYonetim = new BellekYonetim();
     VeriYonetimi _VeriYonetim = new VeriYonetimi();
     [Header("GENEL VERÝLER")]
     public List<ItemBilgileri> _ItemBilgileri = new List<ItemBilgileri>();
+    public List<DilVerileriAnaObje> _DilVerileriAnaObje = new List<DilVerileriAnaObje>();
+    List<DilVerileriAnaObje> _DilOkunanVeriler = new List<DilVerileriAnaObje>();
+    public Text[] TextObjeleri;
 
-    public Animator Kaydedildi_Animator;
-    
+
     void Start()
     {
 
@@ -61,8 +63,30 @@ public class Ozellestirme : MonoBehaviour
         {
             item.volume = _BellekYonetim.VeriOku_f("MenuFx");
         }
-    }
 
+        _VeriYonetim.Dil_Load();
+        _DilOkunanVeriler = _VeriYonetim.DilVerileriListeyiAktar();
+        _DilVerileriAnaObje.Add(_DilOkunanVeriler[1]);
+        DilTercihiYonetimi();
+
+    }
+    void DilTercihiYonetimi()
+    {
+        if (_BellekYonetim.VeriOku_s("Dil") == "TR")
+        {
+            for (int i = 0; i < TextObjeleri.Length; i++)
+            {
+                TextObjeleri[i].text = _DilVerileriAnaObje[0]._DilVerileri_TR[i].Metin;
+            }
+        }
+        else
+        {
+            for (int i = 0; i < TextObjeleri.Length; i++)
+            {
+                TextObjeleri[i].text = _DilVerileriAnaObje[0]._DilVerileri_EN[i].Metin;
+            }
+        }
+    }
     void DurumuKontrolEt(int Bolum, bool islem = false)
     {
 

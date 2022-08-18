@@ -9,11 +9,14 @@ public class AnaMenu_Manager : MonoBehaviour
     BellekYonetim _BellekYonetim = new BellekYonetim();
     VeriYonetimi _VeriYonetim = new VeriYonetimi();
     public GameObject CikisPaneli;
-    public List<ItemBilgileri> _ItemBilgileri = new List<ItemBilgileri>();
+    public List<ItemBilgileri>  _Varsayýlan_ItemBilgileri = new List<ItemBilgileri>();
+    public List<DilVerileriAnaObje> _Varsayýlan_Dilverileri = new List<DilVerileriAnaObje>();
+    
     public AudioSource ButonSes;
     ReklamYonetim _ReklamYonetim = new ReklamYonetim();
 
     public List<DilVerileriAnaObje> _DilVerileriAnaObje = new List<DilVerileriAnaObje>();
+    List<DilVerileriAnaObje> _DilOkunanVeriler = new List<DilVerileriAnaObje>();
     public Text[] TextObjeleri;
 
 
@@ -22,12 +25,17 @@ public class AnaMenu_Manager : MonoBehaviour
     void Start()
     {
         _BellekYonetim.KontrolEtVeTanimla();
-        _VeriYonetim.ilkKurulumDosyaOlusturma(_ItemBilgileri);
+        _VeriYonetim.ilkKurulumDosyaOlusturma(_Varsayýlan_ItemBilgileri,_Varsayýlan_Dilverileri);
         ButonSes.volume = _BellekYonetim.VeriOku_f("MenuFx");
 
         // _BellekYonetim.VeriOku_f("Dil");
 
-        _BellekYonetim.VeriKaydet_string("Dil", "EN");
+        // _BellekYonetim.VeriKaydet_string("Dil", "EN");
+        ///
+
+        _VeriYonetim.Dil_Load();
+        _DilOkunanVeriler  = _VeriYonetim.DilVerileriListeyiAktar();
+        _DilVerileriAnaObje.Add(_DilOkunanVeriler[0]);
         DilTercihiYonetimi();
         
 

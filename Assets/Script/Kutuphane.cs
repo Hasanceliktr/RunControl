@@ -513,7 +513,7 @@ namespace Olcay
             
         }
 
-        public void ilkKurulumDosyaOlusturma(List<ItemBilgileri> _ItemBilgileri)
+        public void ilkKurulumDosyaOlusturma(List<ItemBilgileri> _ItemBilgileri, List<DilVerileriAnaObje> _DilVerileri)
         {
 
             if (!File.Exists(Application.persistentDataPath + "/ItemVerileri.gd"))
@@ -523,8 +523,35 @@ namespace Olcay
                 bf.Serialize(file, _ItemBilgileri);
                 file.Close();
             }
+
+            if (!File.Exists(Application.persistentDataPath + "/DilVerileri.gd"))
+            {
+                BinaryFormatter bf = new BinaryFormatter();
+                FileStream file = File.Create(Application.persistentDataPath + "/DilVerileri.gd");
+                bf.Serialize(file, _DilVerileri);
+                file.Close();
+            }
         }
 
+
+        List<DilVerileriAnaObje> _DilVerileriicliste;
+
+        public void Dil_Load()
+        {
+            if (File.Exists(Application.persistentDataPath + "/DilVerleri.gd"))
+            {
+                BinaryFormatter bf = new BinaryFormatter();
+                FileStream file = File.Open(Application.persistentDataPath + "/DilVerleri.gd", FileMode.Open);
+                _DilVerileriicliste = (List<DilVerileriAnaObje>)bf.Deserialize(file);
+                file.Close();
+
+            }
+        }
+        public List<DilVerileriAnaObje> DilVerileriListeyiAktar()
+        {
+            return _DilVerileriicliste;
+
+        }
     }
 
 
@@ -534,7 +561,7 @@ namespace Olcay
     [Serializable]
     public class DilVerileriAnaObje
     {
-        public int BolumIndex;
+        
         public List<DilVerileri_TR> _DilVerileri_TR = new List<DilVerileri_TR>();
         public List<DilVerileri_EN> _DilVerileri_EN = new List<DilVerileri_EN>();
 
