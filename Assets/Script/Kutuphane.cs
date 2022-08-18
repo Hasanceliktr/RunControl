@@ -350,6 +350,7 @@ namespace Olcay
                 PlayerPrefs.SetFloat("MenuSes", 1);
                 PlayerPrefs.SetFloat("MenuFx", 1);
                 PlayerPrefs.SetFloat("OyunSes", 1);
+                PlayerPrefs.SetString("Dil","TR");
                 PlayerPrefs.SetInt("GecisReklamiSayisi",1);
             }
         }
@@ -526,4 +527,29 @@ namespace Olcay
 
     }
 
+
+
+    // ---------- DIL YONETIMI
+
+    [Serializable]
+    public class DilVerileriAnaObje
+    {
+        public int BolumIndex;
+        public List<DilVerileri_TR> _DilVerileri_TR = new List<DilVerileri_TR>();
+        public List<DilVerileri_EN> _DilVerileri_EN = new List<DilVerileri_EN>();
+
+
+    }
+    [Serializable]
+
+    public class DilVerileri_TR
+    {
+        public string Metin;
+    }
+    [Serializable]
+    public class DilVerileri_EN
+    {
+        public string Metin;
+        
+    }
 }

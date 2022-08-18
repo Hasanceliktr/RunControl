@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Olcay;
+using UnityEngine.UI;
 public class AnaMenu_Manager : MonoBehaviour
 {
     BellekYonetim _BellekYonetim = new BellekYonetim();
@@ -12,6 +13,10 @@ public class AnaMenu_Manager : MonoBehaviour
     public AudioSource ButonSes;
     ReklamYonetim _ReklamYonetim = new ReklamYonetim();
 
+    public List<DilVerileriAnaObje> _DilVerileriAnaObje = new List<DilVerileriAnaObje>();
+    public Text[] TextObjeleri;
+
+
 
 
     void Start()
@@ -20,8 +25,35 @@ public class AnaMenu_Manager : MonoBehaviour
         _VeriYonetim.ilkKurulumDosyaOlusturma(_ItemBilgileri);
         ButonSes.volume = _BellekYonetim.VeriOku_f("MenuFx");
 
+        // _BellekYonetim.VeriOku_f("Dil");
+
+        _BellekYonetim.VeriKaydet_string("Dil", "TR");
+        DilTercihiYonetimi();
+        
+
+        
+       
+
         _ReklamYonetim.RequestRewardedAd();
         _ReklamYonetim.OdulluReklamGoster();
+    }
+
+    void DilTercihiYonetimi()
+    {
+        if (_BellekYonetim.VeriOku_s("Dil") == "TR")
+        {
+            for (int i = 0; i < TextObjeleri.Length; i++)
+            {
+                TextObjeleri[i].text = _DilVerileriAnaObje[0]._DilVerileri_TR[i].Metin;
+            }
+        }
+        else
+        {
+            for (int i = 0; i < TextObjeleri.Length; i++)
+            {
+                TextObjeleri[i].text = _DilVerileriAnaObje[0]._DilVerileri_EN[i].Metin;
+            }
+        }
     }
 
     public void SahneYukle(int Index)
