@@ -25,40 +25,42 @@ public class Karakter : MonoBehaviour
     void Update()
     {
 
-        if (SonaGeldikmi)
+        if (Time.timeScale != 0)
         {
-            transform.position = Vector3.Lerp(transform.position, Gidecegiyer.transform.position, .015f);
-            if(_Slider.value!=0)
-            _Slider.value -= 005f;
-        }
-        else
-        {
-            float Fark = Vector3.Distance(transform.position, GecisNoktasi.transform.position);
-            _Slider.value = Fark;
-
-
-           
-            
-
-            if (Input.GetKey(KeyCode.Mouse0))
+            if (SonaGeldikmi)
             {
-
-                if (Input.GetAxis("Mouse X") < 0)
-                {
-                    transform.position = Vector3.Lerp(transform.position, new Vector3(transform.position.x - .1f, transform.position.y, transform.position.z), .3f);
-
-
-                }
-                if (Input.GetAxis("Mouse X") > 0)
-                {
-
-                    transform.position = Vector3.Lerp(transform.position, new Vector3(transform.position.x + .1f, transform.position.y, transform.position.z), .3f);
-
-                }
-
-
+                transform.position = Vector3.Lerp(transform.position, Gidecegiyer.transform.position, .015f);
+                if (_Slider.value != 0)
+                    _Slider.value -= 005f;
             }
+            else
+            {
+                float Fark = Vector3.Distance(transform.position, GecisNoktasi.transform.position);
+                _Slider.value = Fark;
+
+
+                if (Input.GetKey(KeyCode.Mouse0))
+                {
+
+                    if (Input.GetAxis("Mouse X") < 0)
+                    {
+                        transform.position = Vector3.Lerp(transform.position, new Vector3(transform.position.x - .1f, transform.position.y, transform.position.z), .3f);
+
+
+                    }
+                    if (Input.GetAxis("Mouse X") > 0)
+                    {
+
+                        transform.position = Vector3.Lerp(transform.position, new Vector3(transform.position.x + .1f, transform.position.y, transform.position.z), .3f);
+
+                    }
+
+
+                }
+            }  
         }
+
+        
 
 
         if (Input.GetKey(KeyCode.Mouse0))

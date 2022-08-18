@@ -248,7 +248,7 @@ public class GameManeger : MonoBehaviour
         }
         else if (durum == "Anasayfa")
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(5);
             Time.timeScale = 1;
         }
     }

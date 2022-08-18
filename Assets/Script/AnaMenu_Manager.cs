@@ -27,7 +27,7 @@ public class AnaMenu_Manager : MonoBehaviour
 
         // _BellekYonetim.VeriOku_f("Dil");
 
-        _BellekYonetim.VeriKaydet_string("Dil", "TR");
+        _BellekYonetim.VeriKaydet_string("Dil", "EN");
         DilTercihiYonetimi();
         
 
