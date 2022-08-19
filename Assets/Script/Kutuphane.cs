@@ -526,6 +526,7 @@ namespace Olcay
 
             if (!File.Exists(Application.persistentDataPath + "/DilVerileri.gd"))
             {
+                Debug.Log("Dil verileri dosyasý oluþturuldu dosya yolu : ");
                 BinaryFormatter bf = new BinaryFormatter();
                 FileStream file = File.Create(Application.persistentDataPath + "/DilVerileri.gd");
                 bf.Serialize(file, _DilVerileri);

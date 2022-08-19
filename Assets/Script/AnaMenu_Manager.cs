@@ -28,14 +28,18 @@ public class AnaMenu_Manager : MonoBehaviour
         _VeriYonetim.ilkKurulumDosyaOlusturma(_Varsayýlan_ItemBilgileri,_Varsayýlan_Dilverileri);
         ButonSes.volume = _BellekYonetim.VeriOku_f("MenuFx");
 
-        // _BellekYonetim.VeriOku_f("Dil");
+         //_BellekYonetim.VeriOku_f("Dil");
 
-        // _BellekYonetim.VeriKaydet_string("Dil", "EN");
+       // _BellekYonetim.VeriKaydet_string("Dil", "TR");
         ///
 
         _VeriYonetim.Dil_Load();
+
+        
         _DilOkunanVeriler  = _VeriYonetim.DilVerileriListeyiAktar();
+        Debug.Log(_DilOkunanVeriler[0]+"BURDAYIZ");
         _DilVerileriAnaObje.Add(_DilOkunanVeriler[0]);
+        Debug.Log(_DilOkunanVeriler[0]);
         DilTercihiYonetimi();
         
 
