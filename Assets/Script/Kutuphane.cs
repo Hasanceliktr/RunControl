@@ -534,15 +534,15 @@ namespace Olcay
             }
         }
 
-
+        //***********************************************
         List<DilVerileriAnaObje> _DilVerileriicliste;
 
         public void Dil_Load()
         {
-            if (File.Exists(Application.persistentDataPath + "/DilVerleri.gd"))
+            if (File.Exists(Application.persistentDataPath + "/DilVerileri.gd"))
             {
                 BinaryFormatter bf = new BinaryFormatter();
-                FileStream file = File.Open(Application.persistentDataPath + "/DilVerleri.gd", FileMode.Open);
+                FileStream file = File.Open(Application.persistentDataPath + "/DilVerileri.gd", FileMode.Open);
                 _DilVerileriicliste = (List<DilVerileriAnaObje>)bf.Deserialize(file);
                 file.Close();
 
@@ -564,7 +564,7 @@ namespace Olcay
     {
         
         public List<DilVerileri_TR> _DilVerileri_TR = new List<DilVerileri_TR>();
-        public List<DilVerileri_EN> _DilVerileri_EN = new List<DilVerileri_EN>();
+        public List<DilVerileri_TR> _DilVerileri_EN = new List<DilVerileri_TR>();
 
 
     }

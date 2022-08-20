@@ -37,7 +37,6 @@ public class AnaMenu_Manager : MonoBehaviour
 
         
         _DilOkunanVeriler  = _VeriYonetim.DilVerileriListeyiAktar();
-        Debug.Log(_DilOkunanVeriler[0]+"BURDAYIZ");
         _DilVerileriAnaObje.Add(_DilOkunanVeriler[0]);
         Debug.Log(_DilOkunanVeriler[0]);
         DilTercihiYonetimi();
