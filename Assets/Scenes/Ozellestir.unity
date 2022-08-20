@@ -1539,19 +1539,7 @@ MonoBehaviour:
     Item_Ad: Tema 5
     Puan: 800
     SatinAlmaDurumu: 0
-  _DilVerileriAnaObje:
-  - _DilVerileri_TR: []
-    _DilVerileri_EN: []
-  - _DilVerileri_TR: []
-    _DilVerileri_EN: []
-  - _DilVerileri_TR: []
-    _DilVerileri_EN: []
-  - _DilVerileri_TR: []
-    _DilVerileri_EN: []
-  - _DilVerileri_TR: []
-    _DilVerileri_EN: []
-  - _DilVerileri_TR: []
-    _DilVerileri_EN: []
+  _DilVerileriAnaObje: []
   TextObjeleri:
   - {fileID: 588793812}
   - {fileID: 8418718}
