@@ -13,8 +13,19 @@ public class Level_Manager : MonoBehaviour
     public Sprite KilitliButon;
     public AudioSource ButonSes;
     BellekYonetim _BellekYonetim = new BellekYonetim();
+
+    public List<DilVerileriAnaObje> _DilVerileriAnaObje = new List<DilVerileriAnaObje>();
+    List<DilVerileriAnaObje> _DilOkunanVeriler = new List<DilVerileriAnaObje>();
+    public Text TextObjeleri;
+    VeriYonetimi _VeriYonetim = new VeriYonetimi();
     void Start()
     {
+        
+
+        _VeriYonetim.Dil_Load();
+        _DilOkunanVeriler = _VeriYonetim.DilVerileriListeyiAktar();
+        _DilVerileriAnaObje.Add(_DilOkunanVeriler[2]);
+        DilTercihiYonetimi();
 
         ButonSes.volume = _BellekYonetim.VeriOku_f("MenuFx");
 
@@ -40,9 +51,26 @@ public class Level_Manager : MonoBehaviour
             Index++;
         }
 
+        
+
+
     }
 
-   public void SahneYukle(int Index)
+    void DilTercihiYonetimi()
+    {
+        if (PlayerPrefs.GetString("Dil") == "TR")
+        {
+            
+
+            TextObjeleri.text = _DilVerileriAnaObje[0]._DilVerileri_TR[0].Metin;
+        }
+        else
+        {
+            TextObjeleri.text = _DilVerileriAnaObje[0]._DilVerileri_EN[0].Metin;
+        }
+    }
+
+    public void SahneYukle(int Index)
     {
         ButonSes.Play();
         SceneManager.LoadScene(Index);

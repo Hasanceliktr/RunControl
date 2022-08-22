@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Olcay;
 using UnityEngine.UI;
+using TMPro;
 public class AnaMenu_Manager : MonoBehaviour
 {
     BellekYonetim _BellekYonetim = new BellekYonetim();
@@ -11,8 +12,8 @@ public class AnaMenu_Manager : MonoBehaviour
     public GameObject CikisPaneli;
     public List<ItemBilgileri>  _Varsayýlan_ItemBilgileri = new List<ItemBilgileri>();
     public List<DilVerileriAnaObje> _Varsayýlan_Dilverileri = new List<DilVerileriAnaObje>();
-    
     public AudioSource ButonSes;
+
     ReklamYonetim _ReklamYonetim = new ReklamYonetim();
 
     public List<DilVerileriAnaObje> _DilVerileriAnaObje = new List<DilVerileriAnaObje>();
@@ -21,7 +22,7 @@ public class AnaMenu_Manager : MonoBehaviour
 
 
 
-
+   
     void Start()
     {
         _BellekYonetim.KontrolEtVeTanimla();
@@ -34,11 +35,8 @@ public class AnaMenu_Manager : MonoBehaviour
         ///
 
         _VeriYonetim.Dil_Load();
-
-        
         _DilOkunanVeriler  = _VeriYonetim.DilVerileriListeyiAktar();
         _DilVerileriAnaObje.Add(_DilOkunanVeriler[0]);
-        Debug.Log(_DilOkunanVeriler[0]);
         DilTercihiYonetimi();
         
 

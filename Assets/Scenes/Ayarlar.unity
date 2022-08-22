@@ -681,6 +681,17 @@ MonoBehaviour:
   MenuSes: {fileID: 293279593}
   MenuFx: {fileID: 1571044032}
   OyunSes: {fileID: 540093713}
+  _DilVerileriAnaObje: []
+  TextObjeleri:
+  - {fileID: 1442609675}
+  - {fileID: 1426603292}
+  - {fileID: 397402668}
+  - {fileID: 317849067}
+  - {fileID: 1739768509}
+  DilText: {fileID: 423655}
+  Dilbutonlari:
+  - {fileID: 1931668234}
+  - {fileID: 1321344889}
 --- !u!4 &174199982
 Transform:
   m_ObjectHideFlags: 0
@@ -2455,7 +2466,7 @@ GameObject:
   - component: {fileID: 1321344890}
   - component: {fileID: 1321344889}
   m_Layer: 5
-  m_Name: Button (Legacy) (1)
+  m_Name: ileri
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2529,13 +2540,13 @@ MonoBehaviour:
       - m_Target: {fileID: 174199981}
         m_TargetAssemblyTypeName: AyarlarManager, Assembly-CSharp
         m_MethodName: DilDegisttir
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: ileri
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1321344890
@@ -3721,10 +3732,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 55
+    m_FontSize: 45
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 5
+    m_MinSize: 4
     m_MaxSize: 60
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -3830,7 +3841,7 @@ GameObject:
   - component: {fileID: 1931668235}
   - component: {fileID: 1931668234}
   m_Layer: 5
-  m_Name: Button (Legacy)
+  m_Name: Geri
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3904,13 +3915,13 @@ MonoBehaviour:
       - m_Target: {fileID: 174199981}
         m_TargetAssemblyTypeName: AyarlarManager, Assembly-CSharp
         m_MethodName: DilDegisttir
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: geri
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1931668235

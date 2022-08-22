@@ -29,6 +29,7 @@ public class GameManeger : MonoBehaviour
 
     Matematiksel_islemler _Matematiksel_Ýslemler = new Matematiksel_islemler();
     BellekYonetim _BellekYonetim = new BellekYonetim();
+    VeriYonetimi _VeriYonetim = new VeriYonetimi();
     ReklamYonetim _ReklamYonetim = new ReklamYonetim();
 
     Scene _Scene;
@@ -36,6 +37,9 @@ public class GameManeger : MonoBehaviour
     public AudioSource[] Sesler;
     public GameObject[] islemPanelleri;
     public Slider OyunSesiAyar;
+    public List<DilVerileriAnaObje> _DilVerileriAnaObje = new List<DilVerileriAnaObje>();
+    List<DilVerileriAnaObje> _DilOkunanVeriler = new List<DilVerileriAnaObje>();
+    public Text[] TextObjeleri;
     private void Awake()
     {
         Sesler[0].volume = _BellekYonetim.VeriOku_f("OyunSes");
@@ -46,10 +50,32 @@ public class GameManeger : MonoBehaviour
     }
     void Start()
     {
+        
         DusmanlariOlustur();
         _ReklamYonetim.RequestInterstitial();
         _Scene = SceneManager.GetActiveScene();
-        
+        _VeriYonetim.Dil_Load();
+        _DilOkunanVeriler = _VeriYonetim.DilVerileriListeyiAktar();
+        _DilVerileriAnaObje.Add(_DilOkunanVeriler[5]);
+        DilTercihiYonetimi();
+
+    }
+    void DilTercihiYonetimi()
+    {
+        if (_BellekYonetim.VeriOku_s("Dil") == "TR")
+        {
+            for (int i = 0; i < TextObjeleri.Length; i++)
+            {
+                TextObjeleri[i].text = _DilVerileriAnaObje[0]._DilVerileri_TR[i].Metin;
+            }
+        }
+        else
+        {
+            for (int i = 0; i < TextObjeleri.Length; i++)
+            {
+                TextObjeleri[i].text = _DilVerileriAnaObje[0]._DilVerileri_EN[i].Metin;
+            }
+        }
     }
 
     public void DusmanlariOlustur()
@@ -101,7 +127,7 @@ public class GameManeger : MonoBehaviour
                 _ReklamYonetim.GecisRekalamiGoster();
                 if (AnlikKarakterSayisi < KacDusmanOlsun || AnlikKarakterSayisi == KacDusmanOlsun)
                 {
-                    Debug.Log("Kaybettin.");
+                    islemPanelleri[3].SetActive(true);
                 }
                 else
                 {
@@ -129,8 +155,8 @@ public class GameManeger : MonoBehaviour
                         }
                             
                     }
-                    Debug.Log("Kazandýn");
-                        
+                    islemPanelleri[2].SetActive(true);
+
                 }
             }
         }
@@ -274,6 +300,10 @@ public class GameManeger : MonoBehaviour
 
     }
 
+    public void SonrakiLevel()
+    {
+        SceneManager.LoadScene(_Scene.buildIndex + 1);
+    }
 }
         
 
