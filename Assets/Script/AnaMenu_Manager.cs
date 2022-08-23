@@ -19,10 +19,9 @@ public class AnaMenu_Manager : MonoBehaviour
     public List<DilVerileriAnaObje> _DilVerileriAnaObje = new List<DilVerileriAnaObje>();
     List<DilVerileriAnaObje> _DilOkunanVeriler = new List<DilVerileriAnaObje>();
     public Text[] TextObjeleri;
+    public GameObject YuklemeEkrani;
+    public Slider YuklemeSlider;
 
-
-
-   
     void Start()
     {
         _BellekYonetim.KontrolEtVeTanimla();
@@ -72,11 +71,28 @@ public class AnaMenu_Manager : MonoBehaviour
 
     public void Oyna()
     {
-       // SceneManager.LoadScene("Level1");
+        //SceneManager.LoadScene("Level1");
         //Daha sonrasýnda son level olarak düzenlecek
-        SceneManager.LoadScene(_BellekYonetim.VeriOku_i("SonLevel"));
+        ButonSes.Play();
+       
+
+        StartCoroutine(LoadAsync(_BellekYonetim.VeriOku_i("Level1")));
+        //Burayý tekrar SonLevel diye düzeltecez
     }
     
+    IEnumerator LoadAsync(int sceneIndex)
+    {
+        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
+
+        YuklemeEkrani.SetActive(true);
+
+        while (!operation.isDone)
+        {
+            float progress = Mathf.Clamp01(operation.progress / .9f);
+            YuklemeSlider.value = progress;
+            yield return null;
+        }
+    }
     public void CikisButonislem(string durum)
     {
         ButonSes.Play();

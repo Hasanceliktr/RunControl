@@ -40,6 +40,10 @@ public class GameManeger : MonoBehaviour
     public List<DilVerileriAnaObje> _DilVerileriAnaObje = new List<DilVerileriAnaObje>();
     List<DilVerileriAnaObje> _DilOkunanVeriler = new List<DilVerileriAnaObje>();
     public Text[] TextObjeleri;
+    public GameObject YuklemeEkrani;
+    public Slider YuklemeSlider;
+
+
     private void Awake()
     {
         Sesler[0].volume = _BellekYonetim.VeriOku_f("OyunSes");
@@ -302,8 +306,26 @@ public class GameManeger : MonoBehaviour
 
     public void SonrakiLevel()
     {
-        SceneManager.LoadScene(_Scene.buildIndex + 1);
+        StartCoroutine(LoadAsync(_Scene.buildIndex + 1));
     }
+    
+        IEnumerator LoadAsync(int sceneIndex)
+        {
+            AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
+
+            YuklemeEkrani.SetActive(true);
+
+            while (!operation.isDone)
+            {
+                float progress = Mathf.Clamp01(operation.progress / .9f);
+                YuklemeSlider.value = progress;
+                yield return null;
+            }
+        }
+
+        
+       
+    
 }
         
 
