@@ -22,7 +22,9 @@ public class AyarlarManager : MonoBehaviour
     [Header("DÝL TERCÝHÝ OBJELERÝ")]
     public TextMeshProUGUI DilText;
     public Button[] Dilbutonlari;
-    int AktifDilIndex=0;
+#pragma warning disable IDE0052 // Okunmamýþ özel üyeleri kaldýr
+    int AktifDilIndex;
+#pragma warning restore IDE0052 // Okunmamýþ özel üyeleri kaldýr
     void Start()
     {
         ButonSes.volume = _BellekYonetim.VeriOku_f("MenuFx");

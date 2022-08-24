@@ -18,11 +18,11 @@ public class GameManeger : MonoBehaviour
     public GameObject _AnaKarakter;
     public bool OyunBittimi;
     bool SonaGeldikmi;
-    [Header("SAPKALAR")]
+    [Header("------SAPKALAR")]
     public GameObject[] Sapkalar;
-    [Header("SOPALAR")]
+    [Header("------SOPALAR")]
     public GameObject[] Sopalar;
-    [Header("MATERYALLER")]
+    [Header("------MATERYALLER")]
     public Material[] Materyaller;
     public SkinnedMeshRenderer _Renderer;
     public Material VarsayilanTema;
@@ -31,14 +31,16 @@ public class GameManeger : MonoBehaviour
     BellekYonetim _BellekYonetim = new BellekYonetim();
     VeriYonetimi _VeriYonetim = new VeriYonetimi();
     ReklamYonetim _ReklamYonetim = new ReklamYonetim();
-
     Scene _Scene;
-    [Header("GENEL VERÝLER")]
+
+    [Header("------GENEL VERÝLER")]
     public AudioSource[] Sesler;
     public GameObject[] islemPanelleri;
     public Slider OyunSesiAyar;
     public List<DilVerileriAnaObje> _DilVerileriAnaObje = new List<DilVerileriAnaObje>();
     List<DilVerileriAnaObje> _DilOkunanVeriler = new List<DilVerileriAnaObje>();
+
+    [Header("------LOADING VERÝLER")]
     public Text[] TextObjeleri;
     public GameObject YuklemeEkrani;
     public Slider YuklemeSlider;

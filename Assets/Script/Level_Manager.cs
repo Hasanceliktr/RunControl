@@ -11,6 +11,7 @@ public class Level_Manager : MonoBehaviour
     public Button[] Butonlar;
     public int Level;
     public Sprite KilitliButon;
+
     public AudioSource ButonSes;
     BellekYonetim _BellekYonetim = new BellekYonetim();
 
@@ -18,8 +19,11 @@ public class Level_Manager : MonoBehaviour
     List<DilVerileriAnaObje> _DilOkunanVeriler = new List<DilVerileriAnaObje>();
     public Text[] TextObjeleri;
     VeriYonetimi _VeriYonetim = new VeriYonetimi();
+
     public GameObject YuklemeEkrani;
     public Slider YuklemeSlider;
+
+
     void Start()
     {
 
