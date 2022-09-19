@@ -369,13 +369,13 @@ namespace Olcay
         {
 
             string AdUnitId;
-        #if UNITY_ANDROID
-            AdUnitId = "ca-app-pub-3940256099942544/1033173712";
+#if UNITY_ANDROID
+            AdUnitId = "ca-app-pub-8247297013439591/6772614999";
 
-        #elif UNITY_IPHONE
+#elif UNITY_IPHONE
             AdUnitId = "ca-app-pub-3940256099942544/4411468910";
 
-        #else 
+#else
             AdUnitId = "unexpected_platform";
 #endif
 
@@ -423,7 +423,7 @@ namespace Olcay
         {
             string AdUnitId;
 #if UNITY_ANDROID
-            AdUnitId = "ca-app-pub-3940256099942544/5224354917";
+            AdUnitId = "ca-app-pub-8247297013439591/9030563930";
 
 #elif UNITY_IPHONE
             AdUnitId = "ca-app-pub-3940256099942544/1712485313";

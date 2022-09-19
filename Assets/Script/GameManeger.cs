@@ -325,9 +325,12 @@ public class GameManeger : MonoBehaviour
             }
         }
 
-        
-       
-    
+
+    public void OdulluReklam()
+    {
+        _ReklamYonetim.OdulluReklamGoster();
+    }
+
 }
         
 

@@ -291,7 +291,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 505528443}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1563137894}
+        m_TargetAssemblyTypeName: Market_Manager, Assembly-CSharp
+        m_MethodName: UrunAl_500
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &505528443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -743,7 +755,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 706321723}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1563137894}
+        m_TargetAssemblyTypeName: Market_Manager, Assembly-CSharp
+        m_MethodName: UrunAl_750
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &706321723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -866,7 +890,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 710573438}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1563137894}
+        m_TargetAssemblyTypeName: Market_Manager, Assembly-CSharp
+        m_MethodName: UrunAl_1000
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &710573438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1588,7 +1624,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1478097959}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1563137894}
+        m_TargetAssemblyTypeName: Market_Manager, Assembly-CSharp
+        m_MethodName: UrunAl_250
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1478097959
 MonoBehaviour:
   m_ObjectHideFlags: 0
